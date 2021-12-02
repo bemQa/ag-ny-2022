@@ -612,6 +612,8 @@ header ~ .inner-page-top {
     left: 15px;
     max-width: 107px;
     width: 100%;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .menu-links {
@@ -936,8 +938,8 @@ footer {
     width: 16px;
     height: 16px;
     border-radius: 25px;
-    background: transparent;
-    border: 2px solid #EB2316;
+    background: #fff;
+    border: 2px solid #D3BD9B;
 }
 
 .checkbox input:checked + .checkmark::after {
@@ -950,18 +952,19 @@ footer {
     right: 0;
     bottom: 0;
     margin: auto;
-    background: #EB2316;
+    background: #D3BD9B;
     border-radius: 25px;
 }
 
 .checkbox-text {
     font-size: 14px;
+    color: #000;
     display: inline-block;
     vertical-align: bottom;
 }
 
 .rules-link {
-    color: #EB2316;
+    color: #000;
 }
 
 .input-field input.error[type="checkbox"] ~ .checkbox-text {
@@ -1226,6 +1229,8 @@ span.error {
     margin: 0 auto 18px;
     background: url(../img/kv.png) center 0 no-repeat;
     background-size: contain;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .action-title {
@@ -1291,6 +1296,8 @@ span.error {
     position: relative;
     max-width: 182px;
     margin: 0 auto 20px;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .step-title {
@@ -1373,6 +1380,8 @@ span.error {
     max-width: 235px;
     width: 100%;
     margin: 0 auto 20px;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .main-map-city .bowling {
@@ -1386,6 +1395,8 @@ span.error {
     max-width: 242px;
     width: 100%;
     margin: 0 auto 20px;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .main-map-city .funtomat {
@@ -1401,6 +1412,8 @@ span.error {
     max-width: 286px;
     width: 100%;
     margin: 0 auto 20px;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .main-map-city .game_club {
@@ -1414,6 +1427,8 @@ span.error {
     max-width: 317px;
     width: 100%;
     margin: 0 auto 20px;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .main-map-city .roller_coaster {
@@ -1427,6 +1442,8 @@ span.error {
     max-width: 289px;
     width: 100%;
     margin: 0 auto 20px;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .map-city-how {
@@ -1537,6 +1554,8 @@ span.error {
     justify-content: center;
     height: 400px;
     margin: 0 auto;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .prize1 .prize-img {
@@ -1704,6 +1723,8 @@ span.error {
     background: url(../img/main-gold-choc-star.png) center no-repeat;
     background-size: contain;
     text-align: center;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .main-gold-choc-fame-name {
