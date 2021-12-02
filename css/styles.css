@@ -1234,6 +1234,7 @@ span.error {
 }
 
 .action-title {
+    position: relative;
     font-weight: bold;
     font-size: 25px;
     line-height: 29px;
@@ -1241,6 +1242,7 @@ span.error {
     color: #FCE7A7;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.81);
     margin-bottom: 18px;
+    z-index: 1;
 }
 
 .action-text {
@@ -1701,10 +1703,32 @@ span.error {
 }
 
 .main-gold-choc-text {
+    position: relative;
     font-size: 14px;
     line-height: 20px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.main-gold-choc-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: #FCF2D9;
+    filter: blur(50px);
+    z-index: 0;
+}
+
+.main-gold-choc-text * {
+    position: relative;
+    z-index: 1;
 }
 
 .main-gold-choc-fames {
@@ -2887,6 +2911,27 @@ table td:nth-child(3) {
     background-size: 680px;
 }
 
+@media (max-width: 1366px) {
+    .kv {
+        width: 350px;
+        height: 404px;
+    }
+
+    .action-title {
+        font-size: 23px;
+        line-height: 26px;
+    }
+
+    .action-text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .action-text::before {
+        filter: blur(30px);
+    }
+}
+
 @media (max-width: 1280px) {
 	.container {
     	max-width: 1030px;
@@ -2923,6 +2968,11 @@ table td:nth-child(3) {
 }
 
 @media (max-width: 1024px) {
+    .action-text::before {
+        height: 200%;
+        top: -50px;
+    }
+
     .main-map-city::before {
         top: 165px;
         width: 650px;
@@ -3078,13 +3128,21 @@ table td:nth-child(3) {
     }
 
     .action-title {
+        font-size: 25px;
         line-height: 26px;
         margin-bottom: 8px;
     }
 
     .action-text {
+        font-size: 15px;
         line-height: 18px;
         margin-bottom: 11px;
+    }
+
+    .action-text::before {
+        height: 100%;
+        top: 0;
+        filter: blur(50px);
     }
 
     .steps-block {
@@ -3214,13 +3272,13 @@ table td:nth-child(3) {
 
     .gold-choc-block {
         min-height: 749px;
-        padding: 100px 0 64px;
+        padding: 90px 0 64px;
         background: url(../img/bg5-mob.jpg) center no-repeat;
         background-size: 100% 100%;
     }
 
     .gold-choc-title {
-        top: -155px;
+        top: -145px;
         left: -50px;
         right: -50px;
         width: 336px;
@@ -3239,6 +3297,10 @@ table td:nth-child(3) {
 
     .main-gold-choc-text b {
         font-size: 16px;
+    }
+
+    .main-gold-choc-text::before {
+        display: none;
     }
 
     .main-gold-choc-fames {
