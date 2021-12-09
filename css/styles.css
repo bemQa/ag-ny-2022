@@ -4482,11 +4482,16 @@ table td:nth-child(3) {
     .my-prizes {
         position: relative;
         margin-top: 25px;
-        padding-bottom: 550px;
     }
 
     .my-prizes-count {
         color: #4A020E;
+        padding-bottom: 550px;
+
+    }
+
+    .my-prizes-count.null {
+        padding-bottom: 0;
     }
 
     .my-prizes-count span {
@@ -4504,7 +4509,20 @@ table td:nth-child(3) {
         width: 410px;
     }
 
+    .my-codes-announce,
+    .my-golds-announce {
+        line-height: 1;
+        color: #4A020E;
+    }
 
+    .my-prizes-announce {
+        padding-top: 220px;
+    }
+
+    .my-prizes-announce::before {
+        width: 221px;
+        height: 207px;
+    }
 
 
 
