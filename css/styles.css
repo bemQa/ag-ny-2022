@@ -4012,6 +4012,10 @@ table td:nth-child(3) {
 }
 
 @media (max-width: 1366px) {
+    .action-info {
+        max-width: 500px;
+    }
+
     .kv {
         width: 350px;
         height: 404px;
