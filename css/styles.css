@@ -1107,6 +1107,7 @@ span.error {
     justify-content: center;
     max-width: 290px;
     width: auto;
+    min-width: 176px;
     height: 54px;
     margin: auto;
     padding: 16px 20px;
@@ -2711,7 +2712,7 @@ span.error {
 }
 
 .lk-ferris-wheel-game .btn-wrapper .btn {
-    min-width: 190px;
+    min-width: 196px;
 }
 
 .lk-ferris-wheel-timer {
@@ -3214,10 +3215,10 @@ table td:nth-child(3) {
 .goldtiles-city::after {
     content: '';
     position: absolute;
-    top: 25px;
-    right: -50px;
-    width: 123px;
-    height: 125px;
+    top: 30px;
+    right: -60px;
+    width: 115px;
+    height: 116px;
     background: url(../img/goldtiles.png) center no-repeat;
     background-size: contain;
     image-rendering: optimizequality;
@@ -3250,7 +3251,7 @@ table td:nth-child(3) {
 }
 
 .goldtiles-city .btn-wrapper .btn {
-    max-width: 175px;
+    max-width: 176px;
 }
 
 .map-city::before {
@@ -3430,7 +3431,7 @@ table td:nth-child(3) {
 }
 
 .feedback-form .btn {
-    min-width: 195px;
+    min-width: 196px;
 }
 
 
