@@ -205,6 +205,41 @@ $(document).ready(function () {
     }
     openAccordion();
 
+    $('.tab-trigger').click(function(){
+        $('.tab-trigger').removeClass('active');
+        var tab = $(this).data('tab');
+        $('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('.tab-item').removeClass('active');
+        $('.tab-item.' + tab).addClass('active');
+    });
+
+    function ferrisWheelTimer1() {
+        let start_date = $('.lk-ferris-wheel-timer').data('timer');
+        $('.lk-ferris-wheel-timer').countdown(start_date)
+        .on('update.countdown', function (event) {
+            $(this).html(event.strftime(
+                `<div class="timer timer-hours">%H</div>
+                <div class="timer timer-minutes">%M</div>
+                <div class="timer timer-seconds">%S</div>`
+            ));
+        });
+    }
+    ferrisWheelTimer1();
+
+    function ferrisWheelTimer2() {
+        let start_date = $('.my-game-timer').data('timer');
+        $('.my-game-timer').countdown(start_date)
+        .on('update.countdown', function (event) {
+            $(this).html(event.strftime(
+                `<div class="timer timer-hours">%H</div>
+                <div class="timer timer-minutes">%M</div>
+                <div class="timer timer-seconds">%S</div>`
+            ));
+        });
+    }
+    ferrisWheelTimer2();
+
     $('.lk-prizes-slider').slick({
         dots: false,
         arrows: true,
