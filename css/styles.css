@@ -3130,6 +3130,169 @@ table td:nth-child(3) {
     width: 100%;
 }
 
+.map-city-page {
+    padding: 120px 0 60px;
+    background: url(../img/bg-city.jpg) center 0 no-repeat;
+    background-size: cover;
+}
+
+.city-title {
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 82px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #72040D;
+    margin-bottom: 5px;
+}
+
+.city-text {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4A020E;
+}
+
+.goldtiles-city {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 268px;
+    height: 120px;
+    padding: 15px 10px 35px;
+    background: #FCE7A7;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.goldtiles-city::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: -50px;
+    width: 123px;
+    height: 125px;
+    background: url(../img/goldtiles.png) center no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+.goldtiles-city-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4A020E;
+    margin-bottom: 5px;
+}
+
+.goldtiles-city-text {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #000000;
+}
+
+.goldtiles-city .btn-wrapper {
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+    right: 0;
+}
+
+.goldtiles-city .btn-wrapper .btn {
+    max-width: 175px;
+}
+
+.map-city::before {
+    content: '';
+    position: absolute;
+    top: 170px;
+    left: -60px;
+    right: 0;
+    margin: auto;
+    width: 843px;
+    height: 451px;
+    background: url(../img/chains-city.png) center no-repeat;
+    background-size: contain;
+}
+
+.map-city .map-city-img {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.lock .map-city-img::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -5px;
+    width: 51px;
+    height: 51px;
+    background: url(../img/lock-icon.png) center no-repeat;
+    background-size: contain;
+}
+
+.lock .funtomat-img::before {
+    top: 33px;
+    left: -9px;
+}
+
+.lock .game_club-img::before {
+    top: 190px;
+    left: -7px;
+}
+
+.lock .roller_coaster-img::before {
+    top: 126px;
+    left: -10px;
+}
+
+.map-game-label {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 116px;
+    width: auto;
+    height: 42px;
+    padding: 10px;
+    margin: auto;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FCE7A7;
+    background: linear-gradient(182.19deg, #72040D 6.87%, #F23124 65.92%);
+    border: 2px solid #FFEAAB;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px rgba(101, 25, 5, 0.25);
+    border-radius: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3866,6 +4029,10 @@ table td:nth-child(3) {
     .my-games-list {
         max-width: 680px;
     }
+
+    .goldtiles-city {
+        transform: scale(.8);
+    }
 }
 
 @media (max-width: 1024px) {
@@ -4524,8 +4691,110 @@ table td:nth-child(3) {
         height: 207px;
     }
 
+    .map-city-page {
+        padding: 140px 0 80px;
+        background: url(../img/bg-city-mob.jpg) center 0 no-repeat;
+        background-size: cover;
+    }
 
+    .city-title {
+        font-size: 35px;
+        line-height: 41px;
+    }
 
+    .city-text {
+        margin-bottom: 40px;
+    }
+
+    .goldtiles-city-mob {
+        position: relative;
+        padding: 25px 0 40px;
+    }
+
+    .goldtiles-city-mob::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -500px;
+        right: -500px;
+        bottom: 0;
+        margin: auto;
+        width: 1000px;
+        height: 100%;
+        background: rgba(214, 151, 178, 0.27);
+        box-shadow: 0px 0px 5px #FFFFFF;
+        z-index: 0;
+    }
+
+    .goldtiles-city-mob-title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #72040D;
+        max-width: 238px;
+        margin: 0 auto 10px;
+    }
+
+    .goldtiles-city-accordion-title {
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+        right: 0;
+        width: 80px;
+        height: 14px;
+        margin: 0 auto;        
+    }
+
+    .goldtiles-city-accordion-title::after {
+        content: "Подробнее";
+        position: absolute;
+        top: 0;
+        left: 0px;
+        right: 0px;
+        bottom: 0;
+        width: 80px;
+        height: 14px;
+        margin: auto;
+        padding-right: 15px;
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        color: #4A020E;
+        background: url(../img/goldtiles-city-arrow-down.svg) right center no-repeat;
+        transition: all 0.2s linear 0s;
+    }
+
+    .goldtiles-city-accordion-title.active::after {
+        content: "Свернуть";
+        background: url(../img/goldtiles-city-arrow-top.svg) right center no-repeat;
+    }
+
+    .goldtiles-city-accordion-text {
+        display: none;
+    }
+
+    .goldtiles-city-mob-text {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #4A020E;
+        margin-bottom: 10px;
+    }
+
+    .map-city {
+        margin-top: 44px;
+    }
+
+    .map-city::before {
+        background: url(../img/chains-city-mob.png) center no-repeat;
+        background-size: contain;
+    }
+
+    .map-city .roller_coaster {
+        margin-bottom: 0;
+    }
 
 
 
