@@ -240,49 +240,6 @@ $(document).ready(function () {
     }
     ferrisWheelTimer2();
 
-    $('.lk-prizes-slider').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
-
-    $('.superwinner-slider').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1281,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-
-    if($('.prizes').length && $(window).innerWidth() < 1000) {
-        $('.prizes').slick({
-            dots: true,
-            arrows: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        });
-    }
-
     if($('.main-gold-choc-fames').length && $(window).innerWidth() < 1000) {
         $('.main-gold-choc-fames').slick({
             dots: true,
@@ -334,4 +291,52 @@ $(document).ready(function () {
     }
 
     pinCode();
+
+    if($('.dropify').length) {
+        $('.dropify').dropify();
+    }
 });
+
+function imagePreview() {
+    var reader1 = new FileReader();
+    var reader2 = new FileReader();
+
+    // событие, когда файл загружается
+    reader1.onload = function(e) {
+        document.querySelector(".image-preview-img1").src = e.target.result;
+    };
+
+    reader2.onload = function(e) {
+        document.querySelector(".image-preview-img2").src = e.target.result;
+    };
+
+    // выполнение функции при выборе файла
+    document.querySelector(".image-input1").addEventListener("change", () => {
+        loadImageFile1();
+        $('.photo-upload-info span').hide();
+        $('.photo-upload-info a').show();
+    });
+    document.querySelector(".image-input2").addEventListener("change", () => {
+        loadImageFile2();
+        $('.photo-upload-info span').hide();
+        $('.photo-upload-info a').show();
+    });
+
+    // функция выборки файла
+    function loadImageFile1() {
+        var file1 = document.querySelector(".image-input1").files[0];
+        reader1.readAsDataURL(file1);
+    }
+    function loadImageFile2() {
+        var file2 = document.querySelector(".image-input2").files[0];
+        reader2.readAsDataURL(file2);
+    }
+
+    $('.reset-image-form').click(function(e){
+        $('.image-form')[0].reset();
+        $(".image-preview-img").prop('src', '');
+        $('.photo-upload-info span').show();
+        $('.photo-upload-info a').hide();
+    });
+}
+imagePreview();

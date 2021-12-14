@@ -874,6 +874,7 @@ footer {
     line-height: 26px;
     text-align: center;
     text-transform: uppercase;
+    color: #72040D;
     margin: 0 auto 20px;
 }
 
@@ -893,7 +894,6 @@ footer {
 .popup__desc {
     font-size: 14px;
     line-height: 16px;
-    color: #000;
     margin: 0 auto 20px;
 }
 
@@ -3470,7 +3470,7 @@ table td:nth-child(3) {
 }
 
 .prizes-profile-info .my-bank-coins-text {
-    font-size: 45px;
+    font-size: 43px;
 }
 
 .million-banner {
@@ -3741,6 +3741,372 @@ table td:nth-child(3) {
     text-transform: uppercase;
     color: #FFFFFF;
 }
+
+.fame-page {
+    padding: 70px 0 50px;
+    background: url(../img/bg-fame.jpg) center 0 no-repeat #22100C;
+    background-size: 1920px;
+}
+
+.fame-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 410px;
+    margin: auto;
+    background: linear-gradient(180deg, #9D4510 0%, rgba(50, 20, 6, 0) 100%);
+    z-index: 0;
+}
+
+.fame-gold-choc-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FCE7A7;
+}
+
+.fame-gold-choc-text {
+    max-width: 650px;
+    margin: 0 auto 5px;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.gold-choc-steps {
+    display: flex;
+    justify-content: space-between;
+    max-width: 660px;
+    width: 100%;
+    margin: 25px auto 15px;
+}
+
+.gold-choc-step {
+    display: flex;
+}
+
+.gold-choc-step:first-child {
+    margin-right: 40px;
+}
+
+.gold-choc-step-img {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0px 0px 6px rgb(255 246 197 / 80%), inset 0px 0px 6px rgb(255 246 197 / 87%);
+}
+
+.gold-choc-step-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.gold-choc-step-text {
+    max-width: 170px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.gold-choc-step-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.gold-choc-find {
+    position: absolute;
+    top: 60px;
+    left: -50px;
+    width: 324px;
+    height: 257px;
+    padding: 35px 25px 25px;
+    background: url(../img/gold-choc-find-bg.png) center no-repeat;
+    background-size: contain;
+}
+
+.gold-choc-find-notice {
+    position: absolute;
+    top: -20px;
+    right: -14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background: url(../img/gold-choc-find-notice.png) center no-repeat;
+    background-size: contain;
+    filter: drop-shadow(-1px 1px 5px rgba(26, 15, 8, 0.75));
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #72040D;
+}
+
+.gold-choc-find-notice.not-found {
+    left: -14px;
+}
+
+.gold-choc-find-title {
+    position: relative;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FCE7A7;
+    margin-bottom: 15px;
+}
+
+.gold-choc-find-how {
+    position: relative;
+    display: inline-block;
+}
+
+.gold-choc-find-how-link {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url(../img/how-light.svg) center no-repeat;
+    background-size: contain;
+}
+
+.gold-choc-find-how .tooltip {
+    top: 15px;
+    min-height: 52px;
+}
+
+.gold-choc-find-how .tooltip-text {
+    text-transform: none;
+}
+
+.gold-choc-find-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.gold-choc-kv {
+    position: absolute;
+    top: 10px;
+    right: -85px;
+    width: 371px;
+    height: 308px;
+    background: url(../img/gold-choc-kv.png) center no-repeat;
+    background-size: contain;
+}
+
+.fames-container {
+    max-width: 1366px;
+}
+
+.fame-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #72040D;
+}
+
+.fame-announce {
+    position: relative;
+    padding-top: 240px;
+    margin-top: 60px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.fame-announce::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 156px;
+    height: 156px;
+    background: url(../img/lupa-icon.png) center no-repeat;
+    background-size: contain;
+}
+
+.gold-choc-fames {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.gold-choc-fame {
+    position: relative;
+    max-width: 325px;
+    width: 100%;
+    height: 310px;
+    padding: 140px 86px;
+    margin-bottom: 40px;
+    background: url(../img/main-gold-choc-star.png) center no-repeat;
+    background-size: contain;
+    text-align: center;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.gold-choc-fame-name {
+    max-width: 155px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 14px;
+}
+
+.gold-choc-fame-date {
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 98px;
+    width: auto;
+    height: 42px;
+    padding: 12px 14px 14px;
+    margin: auto;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FCE7A7;
+    background: linear-gradient(182.19deg, #72040D 6.87%, #F23124 65.92%);
+    border: 2px solid #FFEAAB;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px rgb(101 25 5 / 25%);
+    border-radius: 40px;
+}
+
+.my-gold-choc-fames-title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4A020E;
+    margin: 25px auto 15px;
+}
+
+.my-gold-choc-fames {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.my-gold-choc-fames::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -300px;
+    right: -300px;
+    bottom: 0;
+    margin: auto;
+    width: 307px;
+    height: 251px;
+    background: url(../img/my-gold-choc-fame-bg.png) center no-repeat;
+    background-size: contain;
+    z-index: 0;
+}
+
+.my-gold-choc-fames.second-fame::before {
+    width: 628px;
+    height: 251px;
+    background: url(../img/my-gold-choc-fames-bg.png) center no-repeat;
+    background-size: contain;
+}
+
+.image-input:not([type="checkbox"]) {
+    padding-left: 65px;
+}
+
+.image-input:not([type="checkbox"])::file-selector-button {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 35px;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.image-preview {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background: url(../img/add-photo-icon.svg) center no-repeat;
+    background-size: 30px;
+    overflow: hidden;
+}
+
+.image-preview-img {
+    transform: scale(1.5);
+    border: 1px solid #D3BD9B;
+}
+
+.photo-upload-info {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+
+.reset-image-form {
+    font-weight: bold;
+}
+
+.inform-popup .popup__wrap {
+    padding: 80px 10px 40px;
+}
+
+.inform-popup .popup__inner {
+    max-width: 250px;
+}
+
+
 
 
 
@@ -4338,6 +4704,14 @@ table td:nth-child(3) {
     .my-check {
         margin: 10px;
     }
+
+    .gold-choc-find {
+        transform: scale(.8) translateY(20px);
+    }
+
+    .gold-choc-kv {
+        transform: scale(.8) translateY(25px);
+    }
 }
 
 @media (max-width: 1280px) {
@@ -4405,6 +4779,30 @@ table td:nth-child(3) {
         margin: auto;
         width: 1330px;
         transform: scale(.75);
+    }
+
+    .fame-page .container {
+        max-width: 1230px;
+    }
+
+    .gold-choc-steps {
+        flex-direction: column;
+        max-width: 324px;
+    }
+
+    .gold-choc-step:first-child {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .gold-choc-find {
+        left: 0;
+        transform: scale(.7) translate(-35px, 50px);
+    }
+
+    .gold-choc-kv {
+        right: 0;
+        transform: scale(.7) translate(60px, 55px);
     }
 }
 
@@ -5297,6 +5695,87 @@ table td:nth-child(3) {
         min-width: 222px;
     }
 
+    .fame-page {
+        padding: 120px 0 50px;
+        background: url(../img/bg-fame-mob.jpg) center 0 no-repeat #36140B;
+        background-size: 1000px;
+    }
+
+    .fame-gold-choc-title {
+        max-width: 304px;
+        margin: 0 auto 5px;
+    }
+
+    .fame-gold-choc-text {
+        max-width: 320px;
+        color: #4A020E;
+    }
+
+    .gold-choc-steps {
+        margin: 35px auto 650px;
+    }
+
+    .gold-choc-step-title {
+        color: #72040D;
+    }
+
+    .gold-choc-kv {
+        top: 555px;
+        left: -50px;
+        right: -50px;
+        margin: auto;
+        transform: none;
+    }
+
+    .gold-choc-find {
+        top: 900px;
+        left: -50px;
+        right: -50px;
+        margin: auto;
+        transform: none;
+    }
+
+    .gold-choc-find-notice,
+    .gold-choc-find-notice.not-found {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .gold-choc-find-how .tooltip {
+        right: -68px;
+    }
+
+    .fame-title {
+        max-width: 232px;
+        margin: 0 auto;
+    }
+
+    .fame-announce {
+        padding-top: 200px;
+        margin-top: 40px;
+    }
+
+    .my-gold-choc-fames {
+        margin: 10px auto 15px;
+    }
+
+    .my-gold-choc-fames {
+        max-width: 325px;
+        width: 100%
+    }
+
+    .my-gold-choc-fames.second-fame::before {
+        width: 307px;
+        height: 600px;
+        background: url(../img/my-gold-choc-fames-bg-mob.png) center no-repeat;
+        background-size: contain;
+    }
+
+    .gold-choc-fame {
+        margin: 0 auto 25px;
+    }
+
 
 	
 
@@ -5518,5 +5997,13 @@ table td:nth-child(3) {
 
     .faq-item {
         max-width: 255px;
+    }
+
+    .fame-gold-choc-title {
+        font-size: 26px;
+    }
+
+    .fame-gold-choc-text {
+        font-size: 15px;
     }
 }
