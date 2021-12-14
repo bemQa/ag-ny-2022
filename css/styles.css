@@ -3434,14 +3434,313 @@ table td:nth-child(3) {
     min-width: 196px;
 }
 
+.prizes-page {
+    padding: 70px 0 60px;
+    background: url(../img/bg-prizes.jpg) center 0 no-repeat;
+    background-size: cover;
+}
+
+.prizes-page .container {
+    max-width: 1360px;
+}
+
+.prizes-profile-info {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    display: flex;
+}
+
+.prizes-profile-info .my-bank {
+    margin: 40px 20px 10px 0;
+}
+
+.prizes-profile-info .my-bank-text {
+    font-size: 22px;
+}
+
+.prizes-profile-info .my-bank-coins {
+    font-size: 55px;
+    padding-right: 38px;
+}
+
+.prizes-profile-info .my-bank-coins::after {
+    width: 36px;
+    height: 42px;
+}
+
+.prizes-profile-info .my-bank-coins-text {
+    font-size: 45px;
+}
+
+.million-banner {
+    position: relative;
+    width: 817px;
+    height: 190px;
+    margin: 0 auto 100px;
+    background: url(../img/2_5mln.png) center no-repeat;
+    background-size: contain;
+}
+
+.million-banner .btn-wrapper {
+    position: absolute;
+    bottom: -27px;
+    left: 0;
+    right: 0;
+}
+
+.lvl-cards {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lvl-card {
+    position: relative;
+    width: 222px;
+    height: 423px;
+    padding-top: 72px;
+    background: url(../img/lvl-card-bg.png) center no-repeat;
+    background-size: 100% 100%;
+}
+
+.lvl-card-status-wrapper {
+    position: absolute;
+    top: -56px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 140px;
+    height: 127px;
+}
+
+.lvl-card-avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    border: 2px solid #FFE78C;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.lvl-card-status {
+    position: absolute;
+    top: 94px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 140px;
+    height: 27px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.lvl-card-status.status1 {
+    background: #AB8575;
+}
+
+.lvl-card-status.status2 {
+    background: #F9AD01;
+}
+
+.lvl-card-status.status3 {
+    background: #EF304E;
+}
+
+.lvl-card-status.status4 {
+    background: #24D4F9;
+}
+
+.lvl-card-status.status5 {
+    background: #14DC16;
+}
+
+.lvl-card-status.status6 {
+    background: #E50000;
+}
+
+.lvl-card-condition {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.lvl-card-condition span {
+    color: #FFC200;
+}
+
+.lvl-card-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 21px);
+    padding: 7px 0 8px;
+    margin: 0 auto 15px;
+    background: rgba(101, 5, 9, 0.5);
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.lvl-card-game span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.lvl-card-prizes-title {
+    position: relative;
+    width: 80px;
+    padding-left: 25px;
+    margin: 0 auto 15px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.lvl-card-prizes-title::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 18px;
+    height: 19px;
+    background: url(../img/prizes-icon.png) center no-repeat;
+    background-size: contain;
+    filter: drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.2));
+}
+
+.lvl-card-prize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.lvl-card-prize:last-child {
+    margin-bottom: 0;
+}
+
+.lvl-card-prize-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 55px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.lvl-card-prize-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.lvl-card-prize-img.gold img {
+    max-width: 94px;
+    left: -100px;
+    right: -100px;
+}
 
 
+.lvl-card-prize-img.promocode img {
+    max-width: 140px;
+    left: -50px;
+    right: -100px;
+}
 
+.lvl-card-prize-img.money img {
+    max-width: 102px;
+    top: 15px;
+    left: -80px;
+    right: -100px;
+}
 
+.lvl-card-prize-img.cert img {
+    max-width: 128px;
+    top: 5px;
+    left: -60px;
+    right: -100px;
+}
 
+.lvl-card-prize-img.phone {
+    margin-top: 20px;
+}
 
+.lvl-card-prize-img.phone img {
+    max-width: 133px;
+    top: 10px;
+    left: -50px;
+    right: -100px;
+}
 
+.lvl-card-prize-name {
+    position: relative;
+    width: 112px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
 
+.lvl-card-price-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+}
+
+.lvl-card-price-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FCE7A7;
+    margin-bottom: 4px;
+}
+
+.lvl-card-price-text {
+    height: 26px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
 
 
 
@@ -4081,6 +4380,31 @@ table td:nth-child(3) {
 
     .goldtiles-city {
         transform: scale(.8);
+    }
+
+    .prizes-profile-info {
+        transform: scale(.75) translate(15%, -15%);
+    }
+
+    .prizes-profile-info .my-bank {
+        margin-right: 0;
+        transform: scale(.8) translateY(10px);
+    }
+
+    .million-banner {
+        width: 643px;
+        height: 163px;
+        margin-bottom: 450px;
+    }
+
+    .lvl-cards {
+        position: absolute;
+        top: 220px;
+        left: -500px;
+        right: -500px;
+        margin: auto;
+        width: 1330px;
+        transform: scale(.75);
     }
 }
 
@@ -4915,6 +5239,62 @@ table td:nth-child(3) {
     .feedback-form .captcha-field {
         margin-right: 0;
         margin-bottom: 15px;
+    }
+
+    .prizes-page {
+        padding: 30px 0 60px;
+        background: url(../img/bg-prizes-mob.jpg) center 0 no-repeat;
+        background-size: cover;
+    }
+
+    .prizes-page .container {
+        padding: 0;
+    }
+
+    .prizes-profile-info {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        flex-direction: column;
+        margin-bottom: 300px;
+    }
+
+    .prizes-profile-info .my-bank {
+        margin: 20px auto 0;
+        order: 1;
+        transform: none;
+    }
+
+    .million-banner {
+        position: absolute;
+        top: 410px;
+        left: -200px;
+        right: -200px;
+        width: 446px;
+        height: 190px;
+        margin: auto;
+        background: url(../img/2_5mln-mob.png) center no-repeat;
+        background-size: contain;
+    }
+
+    .lvl-cards {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+        padding-top: 56px;
+        padding-left: 15px;
+        width: 100%;
+    }
+
+    .lvl-card {
+        min-width: 222px;
     }
 
 
