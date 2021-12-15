@@ -109,7 +109,7 @@ $(document).ready(function () {
             });
         });
         jQuery.validator.addMethod('email', function (value, element) {
-            return this.optional(element) || /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/.test(value);
+            return this.optional(element) || /\w+@[\da-zA-Z_]+?\.[a-zA-Z]{2,6}/.test(value);
         });
         jQuery.validator.addMethod('phone', function (value, element) {
             return this.optional(element) || /\+7\(\d+\)\d{3}-\d{2}-\d{2}/.test(value);
@@ -339,4 +339,6 @@ function imagePreview() {
         $('.photo-upload-info a').hide();
     });
 }
-imagePreview();
+if($('.image-form').length) {
+    imagePreview();
+}
