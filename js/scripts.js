@@ -240,6 +240,17 @@ $(document).ready(function () {
     }
     ferrisWheelTimer2();
 
+    if($('.prizes').length && $(window).innerWidth() < 1000) {
+        $('.prizes').slick({
+            dots: true,
+            arrows: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    }
+
     if($('.main-gold-choc-fames').length && $(window).innerWidth() < 1000) {
         $('.main-gold-choc-fames').slick({
             dots: true,
