@@ -774,6 +774,55 @@
                 </div>
             </div>
 		</div>
+		<div id="reg-code" class="popup">
+			<div class="popup__wrap">
+				<a href="#!" class="close-popup js-close-popup">
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18.0078 2L2.00781 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    					<path d="M2.00781 2L18.0078 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</a>
+                <div class="popup__inner">
+                    <div class="popup__title">зарегистрировать <br>новый код</div>
+                    <div class="popup__error"></div>
+                    <form class="popup-form">
+                    	<div class="input-field">
+                    		<input type="text" name="code" placeholder="Код с упаковки" required>
+                    	</div>
+                    	<div class="btn-wrapper">
+							<button class="btn popup-btn">Отправить</button>
+						</div>
+                    </form>
+                    <div class="where-code-wrapper">
+                    	<a href="#!" class="link tooltip-trigger"><b>Где найти код?</b></a>
+                    	<div class="tooltip">
+							<a href="#!" class="close-tooltip"></a>
+							<div class="tooltip-text">
+								<p><b>Код располагается на внутренней <br>стороне упаковки, и состоит из 9 символов</b></p>
+								(цифр и заглавных латинских букв). <br>
+								<p><b>Обрати внимание, что <br>коды присутствуют только <br>на упаковках с коммуникацией об акции.</b></p>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div id="reg-code-success" class="popup">
+			<div class="popup__wrap">
+				<a href="#!" class="close-popup js-close-popup">
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18.0078 2L2.00781 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    					<path d="M2.00781 2L18.0078 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</a>
+                <div class="popup__inner">
+                	<div class="popup__title">Спасибо! код принят</div>
+                    <div class="btn-wrapper">
+						<a href="#!" class="btn popup-btn js-close-popup">Понятно</a>
+					</div>
+                </div>
+            </div>
+		</div>
 	</div>
 
 	<script src="libs/jquery-3.5.1.min.js"></script>

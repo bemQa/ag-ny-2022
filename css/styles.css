@@ -1523,6 +1523,7 @@ span.error {
     border-image-source: linear-gradient(118.67deg, rgba(255, 161, 19, 0.3) 13.64%, rgba(255, 211, 99, 0.3) 87.25%);
     border-radius: 20px;
     opacity: 0;
+    z-index: 2;
     pointer-events: none;
     transition: all .3s linear;
 }
@@ -3499,7 +3500,7 @@ table td:nth-child(3) {
 .lvl-card {
     position: relative;
     width: 222px;
-    height: 423px;
+    height: 452px;
     padding-top: 72px;
     background: url(../img/lvl-card-bg.png) center no-repeat;
     background-size: 100% 100%;
@@ -3584,7 +3585,8 @@ table td:nth-child(3) {
     margin-bottom: 5px;
 }
 
-.lvl-card-condition span {
+.lvl-card-condition span,
+.lvl-card-condition a {
     color: #FFC200;
 }
 
@@ -3639,7 +3641,7 @@ table td:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
 }
 
 .lvl-card-prize:last-child {
@@ -3651,7 +3653,7 @@ table td:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 55px;
+    min-width: 90px;
     height: 40px;
     margin-right: 10px;
 }
@@ -3666,46 +3668,54 @@ table td:nth-child(3) {
 }
 
 .lvl-card-prize-img.gold img {
-    max-width: 94px;
-    left: -100px;
+    max-width: 69px;
+    left: -85px;
     right: -100px;
 }
 
+.lvl-card-prize-img.megogo img {
+    max-width: 82px;
+    top: 5px;
+    left: -85px;
+    right: -100px;
+}
 
 .lvl-card-prize-img.promocode img {
-    max-width: 140px;
-    left: -50px;
+    max-width: 82px;
+    top: 5px;
+    left: -85px;
     right: -100px;
 }
 
 .lvl-card-prize-img.money img {
-    max-width: 102px;
+    max-width: 85px;
+    height: 73px;
     top: 15px;
     left: -80px;
     right: -100px;
 }
 
 .lvl-card-prize-img.cert img {
-    max-width: 128px;
+    max-width: 86px;
     top: 5px;
-    left: -60px;
+    left: -85px;
     right: -100px;
 }
 
 .lvl-card-prize-img.phone {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .lvl-card-prize-img.phone img {
-    max-width: 133px;
-    top: 10px;
-    left: -50px;
+    max-width: 51px;
+    bottom: 20px;
+    left: -80px;
     right: -100px;
 }
 
 .lvl-card-prize-name {
     position: relative;
-    width: 112px;
+    width: 100px;
     font-weight: bold;
     font-size: 12px;
     line-height: 14px;
@@ -4568,6 +4578,26 @@ table td:nth-child(3) {
 	font-size: 16px;
 	line-height: 19px;
 }
+
+.where-code-wrapper {
+    position: relative;
+    margin-top: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .products-wrap {
     margin-top: 50px;
