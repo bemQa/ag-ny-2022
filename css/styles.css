@@ -4814,7 +4814,7 @@ table td:nth-child(3) {
     background-size: contain;
 }
 
-.wheel {
+.game-page .wheel {
     position: absolute;
     top: 11px;
     left: 0;
@@ -5445,7 +5445,7 @@ table td:nth-child(3) {
         height: 178px;
     }
 
-    .wheel {
+    .game-page .wheel {
         top: 6px;
         width: 320px;
         height: 320px;
