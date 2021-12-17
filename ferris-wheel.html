@@ -18,7 +18,7 @@
     <![endif]-->
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper not-turn">
 		<div class="content">
 			<header>
 				<div class="menu">
@@ -41,35 +41,109 @@
 						Золотая <br>плитка
 						<span class="goldtiles-lk-mob">Нашёл? <br><span>Жми!</span></span>
 					</a>
+					<a href="city.html" class="btn gold-btn back-btn"><img src="img/back-btn.svg" alt=""> Назад</a>
 				</div>
 			</header>
 			<section class="inner-page game-page">
-				<div class="container">
-					<div class="game-profile-info">
+				<div class="turn-wrapper mobile-visible">
+					<div class="turn-text">
+						переверни телефон, <br>
+						чтобы <br>
+						продолжить игру!
+					</div>
+					<a href="city.html" class="btn gold-btn back-btn"><img src="img/back-btn.svg" alt=""> Назад к карте</a>
+				</div>
+				<div class="aside aside-left">
+					<div class="container">
+						<!-- элементы десктоп -->
+						<a href="city.html" class="btn gold-btn back-btn desktop-visible"><img src="img/back-btn.svg" alt=""> Назад к карте</a>
+						<div class="prize-block-info desktop-visible">
+							<div class="prize-block-info-title">призы, которые ты <br>можешь найти:</div>
+							<div class="prize-block-info-prizes">
+								<div class="prize-block-info-prize">
+									<div class="prize-block-info-prize-img money">
+										<img src="img/prizes/r15-icon.png" alt="">
+									</div>
+									<div class="prize-block-info-prize-name">15 рублей на телефон</div>
+								</div>
+								<div class="prize-block-info-prize">
+									<div class="prize-block-info-prize-img megogo">
+										<img src="img/prizes/megogo-icon.png" alt="">
+									</div>
+									<div class="prize-block-info-prize-name">крутые подписки</div>
+								</div>
+								<div class="prize-block-info-prize">
+									<div class="prize-block-info-prize-img gold">
+										<img src="img/prizes/prize-gold-icon.png" alt="">
+									</div>
+									<div class="prize-block-info-prize-name">от х1 до х3 голдов</div>
+								</div>
+							</div>
+						</div>
+						<!-- элементы мобайл -->
+						<div class="game-title mobile-visible">КОЛЕСО <br>ЛЮБОПЫТНОГО <br>ОБОЗРЕНИЯ</div>
+						<div class="game-text mobile-visible">угадай, в какой <br>кабинке <br>спрятан приз!</div>
+						<div class="my-bank mobile-visible">
+							<div class="my-bank-text">в банке</div>
+							<div class="my-bank-coins">1000</div>
+							<div class="my-bank-coins-text">голдов</div>
+						</div>
+						<a href="prizes.html" class="prize-block-info-button mobile-visible">
+							<img src="img/button_prizes.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="container game-container">
+					<div class="game-title desktop-visible">КОЛЕСО ЛЮБОПЫТНОГО ОБОЗРЕНИЯ</div>
+					<div class="game-text desktop-visible">угадай, в какой кабинке спрятан приз!</div>
+					<div class="game-ferris-wheel">
+						<div class="legs"></div>
+						<div class="wheel"></div>
+						<div class="booths">
+							<div class="booth booth-red booth12 pop-op" data-popup="draw-confirm"></div>
+							<div class="booth booth-purple booth1 pop-op" data-popup="draw-prize-no-reg"></div>
+							<div class="booth booth-blue booth3 pop-op" data-popup="draw-confirm"></div>
+							<div class="booth booth-green booth5 pop-op" data-popup="draw-confirm"></div>
+							<div class="booth booth-red booth6 pop-op" data-popup="draw-confirm"></div>
+							<div class="booth booth-purple booth7 pop-op" data-popup="draw-confirm"></div>
+							<div class="booth booth-blue booth9 pop-op" data-popup="draw-confirm"></div>
+							<div class="booth booth-green booth11 pop-op" data-popup="draw-confirm"></div>
+						</div>
+					</div>
+				</div>
+				<div class="aside aside-right">
+					<div class="container">
 						<div class="profile-lvls">
 							<div class="profile-avatar">
 								<img src="img/avatars/lvl1.png" alt="">
 							</div>
+							<div class="profile-name2">Надежда</div>
 							<div class="profile-lvl">
 								Твой уровень <span class="profile-lvl-num">1</span>:
 								<a href="prizes.html" class="profile-lvl-link">Новичок</a>
-								<div class="profile-lvl-how">
-									<a href="#!" class="profile-lvl-how-link tooltip-trigger"></a>
-									<div class="tooltip">
-										<a href="#!" class="close-tooltip"></a>
-										<div class="tooltip-text">
-											<p><b>Вау! Вот это ты празднуешь!</b></p><br>
-											<b>Поздравляем с новым игровым статусом.</b><br><br>
-											Кликни на него и узнай, какие локации, <br>призы и другие бонусы тебе доступны.
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
-						<div class="my-bank">
+						<div class="my-bank desktop-visible">
 							<div class="my-bank-text">в банке</div>
-							<div class="my-bank-coins">1</div>
-							<div class="my-bank-coins-text">голд</div>
+							<div class="my-bank-coins">1000</div>
+							<div class="my-bank-coins-text">голдов</div>
+						</div>
+						<!-- уведомление для неавторизованного -->
+						<!-- <div class="game-notice">
+							ИГРАЙ ОДИН РАЗ БЕСПЛАТНО <br>
+							И БЕЗ РЕГИСТРАЦИИ <br>
+							НА САЙТЕ!
+						</div> -->
+						<div class="lk-ferris-wheel">
+							<div class="lk-ferris-wheel-timer" data-timer="2021/12/18 00:00:00"></div>
+						</div>
+						<div class="not-wait">
+							не хочешь ждать? <br>
+							<b>Стоимость новой игры:</b> <br>
+							<span>1 голд</span>
+						</div>
+						<div class="btn-wrapper center">
+							<a href="#!" class="btn pop-op" data-popup="draw-confirm">Играть</a>
 						</div>
 					</div>
 				</div>
@@ -342,6 +416,66 @@
                     <div class="popup__desc">Спасибо за сообщение! Мы ответим на него в ближайшее время.</div>
                     <div class="btn-wrapper">
 						<a href="#!" class="btn popup-btn">Понятно</a>
+					</div>
+                </div>
+            </div>
+		</div>
+		<div id="draw-confirm" class="popup inform-popup">
+			<div class="popup__wrap">
+				<a href="#!" class="close-popup js-close-popup">
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18.0078 2L2.00781 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    					<path d="M2.00781 2L18.0078 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</a>
+                <div class="popup__inner">
+                	<div class="popup__title popup__title-mini">ты уверен, что хочешь <br>потратить 1 голд в игре «колесо любопытного обозрения»?</div>
+                	<div class="btn-wrapper">
+						<a href="#!" class="btn popup-btn pop-op" data-popup="draw-prize">Да! играем</a>
+					</div>
+                </div>
+            </div>
+		</div>
+		<div id="draw-prize-no-reg" class="popup">
+			<div class="popup__wrap">
+				<a href="#!" class="close-popup js-close-popup">
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18.0078 2L2.00781 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    					<path d="M2.00781 2L18.0078 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</a>
+                <div class="popup__inner">
+                	<div class="popup__title">Какая удача! <br>Твой приз на сегодня:</div>
+                	<div class="popup-draw-img">
+                		<img srcset="img/prizes/prize-gold.png 1x, img/prizes/prize-gold@2x.png 2x" alt="">
+                	</div>
+                	<div class="popup-draw-gold-count">1 голд</div>
+                	<div class="popup-draw-text">Он уже в личном кабинете. <br>Если ты уже участвовал в акциях alpen gold, <br>заходи по своим логину и паролю </div>
+                	<div class="btn-wrapper">
+						<a href="#!" class="btn popup-btn pop-op" data-popup="auth">Войти</a>
+					</div>
+					<div class="reg-text">
+                    	<a href="#!" class="link popup-link pop-op" data-popup="reg">Регистрация</a>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div id="draw-prize" class="popup">
+			<div class="popup__wrap">
+				<a href="#!" class="close-popup js-close-popup">
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18.0078 2L2.00781 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    					<path d="M2.00781 2L18.0078 18" stroke="#682700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</a>
+                <div class="popup__inner">
+                	<div class="popup__title">Сегодня удача <br>на твоей стороне! <br>Твой приз:</div>
+                	<div class="popup-draw-img">
+                		<img srcset="img/prizes/prize-gold.png 1x, img/prizes/prize-gold@2x.png 2x" alt="">
+                	</div>
+                	<div class="popup-draw-gold-count">3 голда</div>
+                	<div class="btn-wrapper">
+						<a href="#!" class="btn popup-btn">Забрать</a>
 					</div>
                 </div>
             </div>

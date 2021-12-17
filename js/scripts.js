@@ -303,8 +303,31 @@ $(document).ready(function () {
 
     pinCode();
 
-    if($('.dropify').length) {
-        $('.dropify').dropify();
+    function turnApp() {
+        let mql = window.matchMedia("(orientation: portrait)");
+
+        if(mql.matches) {  
+            $('.wrapper').removeClass('turn');
+            $('.wrapper').addClass('not-turn');
+        } else {  
+            $('.wrapper').removeClass('not-turn');
+            $('.wrapper').addClass('turn');
+        }
+
+        // Прослушка события изменения ориентации
+        mql.addListener(function(m) {
+            if(m.matches) {
+                $('.wrapper').removeClass('turn');
+                $('.wrapper').addClass('not-turn');
+            }
+            else {
+                $('.wrapper').removeClass('not-turn');
+                $('.wrapper').addClass('turn');
+            }
+        });
+    }
+    if($('.game-page').length) {
+        turnApp();
     }
 });
 

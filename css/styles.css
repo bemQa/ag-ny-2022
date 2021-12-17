@@ -576,6 +576,7 @@ body {
     margin: 0;
     color: #4A020E;
     font: normal 16px/19px 'OfficinaSans', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
@@ -4585,13 +4586,442 @@ table td:nth-child(3) {
     margin-top: 12px;
 }
 
+.game-page {
+    min-height: 810px;
+    padding: 80px 0 0;
+    background: url(../img/bg-game.jpg) center 0 no-repeat;
+    background-size: cover;
+}
 
+.game-page .aside {
+    position: absolute;
+    top: 0;
+    min-width: 348px;
+    min-height: auto;
+    padding-top: 80px;
+    background: none;
+}
 
+.game-page .aside-left {
+    left: 0;
+}
 
+.game-page .aside-right {
+    right: 0;
+}
 
+.game-page .back-btn {
+    top: 100px;
+    right: 0;
+    margin: 0 auto;
+    width: 172px;
+}
 
+.prize-block-info {
+    position: absolute;
+    top: 260px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 35px 25px 25px;
+    width: 306px;
+    height: 337px;
+    background: url(../img/prize-block-info-bg.png) center no-repeat;
+    background-size: contain;
+}
 
+.prize-block-info-title {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FCE7A7;
+    margin-bottom: 10px;
+}
 
+.prize-block-info-prize {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.prize-block-info-prize::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 222px;
+    height: 1px;
+    background: rgba(252, 231, 167, 0.33);
+    border-radius: 20px;
+}
+
+.prize-block-info-prize-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    height: 40px;
+    margin-right: 30px;
+}
+
+.prize-block-info-prize-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.prize-block-info-prize-img.gold img {
+    max-width: 69px;
+    left: -85px;
+    right: -100px;
+}
+
+.prize-block-info-prize-img.megogo img {
+    max-width: 82px;
+    top: 5px;
+    left: -85px;
+    right: -100px;
+}
+
+.prize-block-info-prize-img.promocode img {
+    max-width: 82px;
+    top: 5px;
+    left: -85px;
+    right: -100px;
+}
+
+.prize-block-info-prize-img.money img {
+    max-width: 85px;
+    height: 73px;
+    top: 15px;
+    left: -80px;
+    right: -100px;
+}
+
+.prize-block-info-prize-img.cert img {
+    max-width: 86px;
+    top: 5px;
+    left: -85px;
+    right: -100px;
+}
+
+.prize-block-info-prize-img.phone {
+    margin-top: 30px;
+}
+
+.prize-block-info-prize-img.phone img {
+    max-width: 51px;
+    bottom: 20px;
+    left: -80px;
+    right: -100px;
+}
+
+.prize-block-info-prize-name {
+    position: relative;
+    width: 130px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.game-page .profile-lvls {
+    margin: auto;
+}
+
+.profile-name2 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.62);
+}
+
+.game-notice {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 240px;
+    height: 120px;
+    background: linear-gradient(217.17deg, #FFFFFF -55.4%, #FFE686 54.82%, #F7B545 152.24%);
+    box-shadow: -1px 1px 2px rgba(104, 39, 0, 0.75);
+    border-radius: 22px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    color: #72040D;
+}
+
+.profile-lvls + .game-notice {
+    margin-top: 100px;
+}
+
+.my-bank + .game-notice {
+    margin-top: 50px;
+}
+
+.game-title {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 52px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FCE7A7;
+    margin-bottom: 5px;
+}
+
+.game-text {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.game-ferris-wheel {
+    position: relative;
+    width: 614px;
+    height: 660px;
+    margin: auto;
+}
+
+.legs {
+    position: absolute;
+    top: 380px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 256px;
+    height: 319px;
+    background: url(../img/games/ferris-wheel/legs.png) center no-repeat;
+    background-size: contain;
+}
+
+.wheel {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 575px;
+    height: 575px;
+    background: url(../img/games/ferris-wheel/wheel.png) center no-repeat;
+    background-size: contain;
+    animation: 40s wheel infinite linear;
+}
+
+.booths {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin: auto;
+    width: 575px;
+    height: 575px;
+    z-index: 1;
+    animation: 40s wheel infinite linear;
+}
+
+.booth {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 91px;
+    height: 91px;
+    animation: 40s booth infinite linear;
+    transform-origin: center 0;
+    cursor: pointer;
+}
+
+.booth::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    right: -50px;
+    bottom: 0;
+    margin: auto;
+    width: 135px;
+    height: 146px;
+    background: url(../img/games/ferris-wheel/booth_glow.png) center no-repeat;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.booth::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.booth:hover::before {
+    opacity: 1;
+}
+
+.booth12 {
+    top: 22px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+}
+
+.booth1 {
+    top: 97px;
+    right: -364px;
+}
+
+.booth3 {
+    top: 280px;
+    left: 0;
+    right: -530px;
+}
+
+.booth5 {
+    top: 480px;
+    right: -364px;
+}
+
+.booth6 {
+    top: 552px;
+}
+
+.booth7 {
+    top: 480px;
+    left: -364px;
+}
+
+.booth9 {
+    top: 280px;
+    left: -530px;
+}
+
+.booth11 {
+    top: 97px;
+    left: -364px;
+}
+
+.booth-red::after {
+    background: url(../img/games/ferris-wheel/booth_red.png) center no-repeat;
+    background-size: 85px;
+}
+
+.booth-purple::after {
+    background: url(../img/games/ferris-wheel/booth_purple.png) center no-repeat;
+    background-size: 85px;
+}
+
+.booth-blue::after {
+    background: url(../img/games/ferris-wheel/booth_blue.png) center no-repeat;
+    background-size: 85px;
+}
+
+.booth-green::after {
+    background: url(../img/games/ferris-wheel/booth_green.png) center no-repeat;
+    background-size: 85px;
+}
+
+@keyframes wheel {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes booth {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.popup-draw-gold-count {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #72040D;
+}
+
+.popup-draw-gold-text {
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.popup-draw-img + .btn-wrapper,
+.popup-draw-gold-count + .btn-wrapper,
+.popup-draw-text + .btn-wrapper {
+    margin-top: 20px;
+}
+
+.game-page .lk-ferris-wheel {
+    height: 148px;
+    margin-top: 20px;
+}
+
+.game-page .lk-ferris-wheel-timer {
+    top: 0;
+}
+
+.not-wait {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.not-wait span {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FCE7A7;
+}
 
 
 
@@ -4941,6 +5371,14 @@ table td:nth-child(3) {
         right: 0;
         transform: scale(.7) translate(60px, 55px);
     }
+
+    .game-page .aside-left {
+        transform: scale(.8) translate(-10%, -10%);
+    }
+
+    .game-page .aside-right {
+        transform: scale(.8) translate(10%, -10%);
+    }
 }
 
 @media (max-width: 1024px) {
@@ -4968,6 +5406,123 @@ table td:nth-child(3) {
 
     .my-prizes-list {
         max-width: 410px;
+    }
+
+    .game-page {
+        min-height: 634px;
+    }
+
+    .prize-block-info {
+        top: 160px;
+    }
+
+    .game-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 554px;
+    }
+
+    .game-title {
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    .game-text {
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    .game-ferris-wheel {
+        width: 341px;
+        height: 390px;
+        margin-top: auto;
+    }
+
+    .legs {
+        top: 212px;
+        width: 143px;
+        height: 178px;
+    }
+
+    .wheel {
+        top: 6px;
+        width: 320px;
+        height: 320px;
+    }
+
+    .booths {
+        top: 6px;
+        width: 320px;
+        height: 320px;
+    }
+
+    .booth {
+        width: 51px;
+        height: 51px;
+    }
+
+    .booth::before {
+        width: 75px;
+        height: 82px;
+    }
+
+    .booth-red::after {
+        background: url(../img/games/ferris-wheel/booth_red.png) center no-repeat;
+        background-size: 48px;
+    }
+
+    .booth-purple::after {
+        background: url(../img/games/ferris-wheel/booth_purple.png) center no-repeat;
+        background-size: 48px;
+    }
+
+    .booth-blue::after {
+        background: url(../img/games/ferris-wheel/booth_blue.png) center no-repeat;
+        background-size: 48px;
+    }
+
+    .booth-green::after {
+        background: url(../img/games/ferris-wheel/booth_green.png) center no-repeat;
+        background-size: 48px;
+    }
+
+    .booth12 {
+        top: 12px;
+    }
+
+    .booth1 {
+        top: 50px;
+        right: -198px;
+    }
+
+    .booth3 {
+        top: 156px;
+        right: -294px;
+    }
+
+    .booth5 {
+        top: 258px;
+        right: -220px;
+    }
+
+    .booth6 {
+        top: 307px
+    }
+
+    .booth7 {
+        top: 258px;
+        left: -220px;
+    }
+
+    .booth9 {
+        top: 156px;
+        left: -294px;
+    }
+
+    .booth11 {
+        top: 50px;
+        left: -198px;
     }
 }
 
@@ -6011,6 +6566,232 @@ table td:nth-child(3) {
         max-width: 180px;
         margin: auto;
 	}
+
+    .not-turn .game-page {
+        min-height: 100vh;
+        padding: 160px 0 190px;
+        background: url(../img/bg-game.jpg) center 0 no-repeat;
+        background-size: cover;
+    }
+
+    .turn-wrapper {
+        position: relative;
+    }
+
+    .turn-text {
+        position: relative;
+        padding-bottom: 135px;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 29px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FCE7A7;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .turn-text::after {
+        content: '';
+        position: absolute;
+        top: 104px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 119px;
+        height: 119px;
+        background: url(../img/turn-phone-icon.svg) center no-repeat;
+        background-size: contain;
+    }
+
+    .turn-wrapper .back-btn {
+        top: 325px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 172px;
+    }
+
+    .not-turn .game-page .aside-left,
+    .not-turn .game-page .game-container,
+    .not-turn .game-page .aside-right,
+    .wrapper:not(.not-turn) .turn-wrapper,
+    .not-turn footer,
+    .turn footer,
+    .turn .logo,
+    .turn .goldtiles-main-mob {
+        display: none;
+    }
+
+    .turn header, 
+    .turn .menu {
+        height: 50px;
+    }
+
+    .turn header::before {
+        height: 62px;
+        background: linear-gradient(180deg, rgba(35, 10, 3, 0.57) 0%, rgba(35, 10, 3, 0) 90.32%);
+        backdrop-filter: none;
+    }
+
+    .turn .burger {
+        height: 50px;
+    }
+
+    .turn header .back-btn {
+        top: 0;
+        left: auto;
+        right: 15px;
+        bottom: 0;
+        margin: auto;
+        width: 78px;
+        min-width: 78px;
+        height: 28px;
+        padding-left: 30px;
+        font-size: 13px;
+        z-index: 11;
+    }
+
+    .turn header .back-btn img {
+        left: 10px;
+        width: 9px;
+    }
+
+    .turn .menu-links.active {
+        top: 0;
+    }
+
+    .turn .game-page {
+        min-height: 100vh;
+        padding: 0;
+        background: url(../img/bg-game-vert-mob.jpg) center 0 no-repeat;
+        background-size: cover;
+    }
+
+    .game-page .aside {
+        min-width: 156px;
+        padding: 50px 0 0;
+        transform: none;
+    }
+
+    .game-page .aside-left .container {
+        padding-left: 15px;
+        padding-right: 0;
+    }
+
+    .game-page .aside-right {
+        width: 156px;
+    }
+
+    .game-page .aside-right .container {
+        width: 156px;
+        padding-left: 0;
+        padding-right: 15px;
+    }
+
+    .game-title,
+    .game-text {
+        text-align: left;
+    }
+
+    .game-page .my-bank.mobile-visible {
+        display: inline-flex;
+        margin: 30px 0 15px 10px;
+    }
+
+    .game-page .my-bank-text {
+        font-size: 9px;
+        line-height: 10px;
+    }
+
+    .game-page .my-bank-coins {
+        padding-right: 17px;
+        font-size: 23px;
+        line-height: 27px;
+        text-shadow: 0px 0.514013px 1.02803px rgba(0, 0, 0, 0.5);
+    }
+
+    .game-page .my-bank-coins::after {
+        width: 16px;
+        height: 18px;
+        filter: drop-shadow(2.57006px 1.54204px 2.05605px rgba(114, 4, 13, 0.2));
+    }
+
+    .game-page .my-bank-coins-text {
+        font-size: 18px;
+        line-height: 21px;
+        text-shadow: 0px 0.514013px 1.02803px rgba(0, 0, 0, 0.5);
+    }
+
+    .prize-block-info-button {
+        width: 87px;
+    }
+
+    .game-page .profile-lvls {
+        width: 90px;
+        margin: 0 0 0 auto;
+    }
+
+    .game-page .profile-avatar {
+        width: 80px;
+        height: 80px;
+        margin: 0 0 5px;
+    }
+
+    .profile-name2 {
+        font-size: 14px;
+        line-height: 17px;
+        text-shadow: 0px 0.787671px 1.57534px rgba(0, 0, 0, 0.62);
+    }
+
+    .profile-lvl {
+        font-size: 8px;
+        text-shadow: 0px 0.787671px 1.57534px rgba(0, 0, 0, 0.62);
+    }
+
+    .profile-lvl-num {
+        font-size: 11px;
+    }
+
+    .profile-lvl-link {
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 17px;
+    }
+
+    .game-page .lk-ferris-wheel {
+        height: 69px;
+        margin-top: 0;
+        transform: scale(0.45);
+    }
+
+    .not-wait {
+        margin-top: 25px;
+        margin-bottom: 5px;
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .not-wait span {
+        font-size: 13px;
+        line-height: 1;
+    }
+
+    .not-wait + .btn-wrapper .btn {
+        max-width: 150px;
+        min-width: 150px;
+        height: 40px;
+        padding: 8px 10px;
+    }
+
+    .game-container {
+        min-height: auto;
+    }
+
+
+
+
+
+
 
     .products-group {
         margin-bottom: 50px;
