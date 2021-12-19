@@ -18,6 +18,7 @@
     <![endif]-->
 </head>
 <body>
+	<!-- <div style="height: 36px;"></div> -->
 	<div class="wrapper not-turn">
 		<div class="content">
 			<header>
@@ -129,7 +130,7 @@
 							<div class="my-bank-coins-text">голдов</div>
 						</div>
 						<!-- уведомление для неавторизованного -->
-						<!-- <div class="game-notice">
+						<!-- <div class="game-notice no-reg">
 							ИГРАЙ ОДИН РАЗ БЕСПЛАТНО <br>
 							И БЕЗ РЕГИСТРАЦИИ <br>
 							НА САЙТЕ!
@@ -490,5 +491,12 @@
 	<script src="libs/jquery.countdown.min.js"></script>
 	<script src="libs/slick.min.js"></script>
 	<script src="js/scripts.js"></script>
+
+	<script>
+		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+		let vh = window.innerHeight * 0.01;
+		// Then we set the value in the --vh custom property to the root of the document
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	</script>
 </body>
 </html>

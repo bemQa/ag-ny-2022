@@ -329,6 +329,53 @@ $(document).ready(function () {
     if($('.game-page').length) {
         turnApp();
     }
+
+    function bowlingGame(result) {
+        let video = $('#video-bowling-'+result).get(0);
+        video.controls = false;
+        $('.video-bowling').hide();
+        $('#video-bowling-'+result).show();
+        video.play();
+        document.getElementById('video-bowling-'+result).addEventListener('ended', myHandler, false);
+        function myHandler(e) {
+            video.pause();
+            if (result == 'fail') {
+                OpenPopup('draw-fail');
+            } else if (result == 'half') {
+                OpenPopup('draw-fail');
+            } else if (result == 'strike') {
+                OpenPopup('draw-prize');
+            }
+        }
+    }
+    $('.bowling-game').click(function(e){
+        // значение функции - один из 3х вариантов видео (fail, half, strike), если не нравятся названия результатов - поменять их и у айдишников видео
+        bowlingGame('fail');
+    });
+
+    function rollerCoasterGame(result) {
+        let video = $('#video-roller-coaster-'+result).get(0);
+        video.controls = false;
+        $('.video-roller-coaster').hide();
+        $('#video-roller-coaster-'+result).show();
+        video.play();
+        document.getElementById('video-roller-coaster-'+result).addEventListener('ended', myHandler, false);
+        function myHandler(e) {
+            video.pause();
+            if (result == '1-3') {
+                OpenPopup('draw-fail');
+            } else if (result == '2-3') {
+                OpenPopup('draw-fail');
+            } else if (result == '3-3') {
+                OpenPopup('draw-prize');
+            }
+        }
+    }
+    $('.roller-coaster-game').click(function(e){
+        // значение функции - один из 3х вариантов видео (1-3, 2-3, 3-3), если не нравятся названия результатов - поменять их и у айдишников видео
+        rollerCoasterGame('3-3');
+    });
+    
 });
 
 function imagePreview() {
