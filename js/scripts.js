@@ -375,6 +375,52 @@ $(document).ready(function () {
         // значение функции - один из 3х вариантов видео (1-3, 2-3, 3-3), если не нравятся названия результатов - поменять их и у айдишников видео
         rollerCoasterGame('3-3');
     });
+
+    function spinGame(first, second, third) {
+        var chocos = ['zero','one','two','three','four','five','six','seven','eight'],
+        prev = -1;
+
+        function spinOne() {
+            do {
+                // index = Math.floor(Math.random()*chocos.length);
+                index = first;
+            } while (index == prev);
+            var equation = $('#equation1').removeClass("done").removeClass(chocos[prev]).addClass(chocos[index]),
+                timeout = setTimeout(function() { equation.addClass('done') },3000);
+                // timeout = equation.addClass('done');
+            prev = index;
+        }
+        function spinTwo() {
+            do {
+                index = second;
+            } while (index == prev);
+            var equation = $('#equation2').removeClass("done").removeClass(chocos[prev]).addClass(chocos[index]),
+                timeout = setTimeout(function() { equation.addClass('done') },3400);
+                // timeout = equation.addClass('done');
+            prev = index;
+        }
+        function spinThree() {
+            do {
+                index = third;
+            } while (index == prev);
+            var equation = $('#equation3').removeClass("done").removeClass(chocos[prev]).addClass(chocos[index]),
+                timeout = setTimeout(function() { 
+                    equation.addClass('done');
+                    OpenPopup('draw-prize');
+                },3800);
+                // timeout = equation.addClass('done');
+            prev = index;
+        }
+        spinOne();
+        spinTwo();
+        spinThree();
+    }
+
+    
+    $('.funtomat-game').click(function(e){
+        // значение функции - один из 3х вариантов видео (1-3, 2-3, 3-3), если не нравятся названия результатов - поменять их и у айдишников видео
+        spinGame(2, 3, 4);
+    });
     
 });
 
