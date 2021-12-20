@@ -5232,6 +5232,115 @@ table td:nth-child(3) {
 }
 /**/
 
+.game-game-club {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 604px;
+    height: 548px;
+    margin: 10px auto;
+    background: url(../img/games/game-club/bg.png) center no-repeat;
+    background-size: contain;
+}
+
+.flip-container {
+    margin: 0 2px;
+    perspective: 1000px;
+}
+
+/*.flip-container:hover .flipper, .flip-container.hover .flipper,*/
+.flip-container.active .flipper, .flip-container.hover .flipper {
+    transform: rotateY(-180deg);
+}
+
+.flip-container, .front, .back {
+    width: 138px;
+    height: 313px;
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.front {
+    background: url(../img/games/game-club/card-front.png) center no-repeat;
+    background-size: contain;
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(-180deg);
+}
+
+.zero .back {
+    background: url(../img/games/game-club/1.png) center no-repeat;
+    background-size: contain;
+}
+
+.one .back {
+    background: url(../img/games/game-club/2.png) center no-repeat;
+    background-size: contain;
+}
+
+.two .back {
+    background: url(../img/games/game-club/3.png) center no-repeat;
+    background-size: contain;
+}
+
+.three .back {
+    background: url(../img/games/game-club/4.png) center no-repeat;
+    background-size: contain;
+}
+
+.four .back {
+    background: url(../img/games/game-club/5.png) center no-repeat;
+    background-size: contain;
+}
+
+.five .back {
+    background: url(../img/games/game-club/6.png) center no-repeat;
+    background-size: contain;
+}
+
+.six .back {
+    background: url(../img/games/game-club/7.png) center no-repeat;
+    background-size: contain;
+}
+
+.seven .back {
+    background: url(../img/games/game-club/8.png) center no-repeat;
+    background-size: contain;
+}
+
+.back.eight {
+    background: url(../img/games/game-club/9.png) center no-repeat;
+    background-size: contain;
+}
+
+.back.nine {
+    background: url(../img/games/game-club/10.png) center no-repeat;
+    background-size: contain;
+}
+
+.back.ten {
+    background: url(../img/games/game-club/11.png) center no-repeat;
+    background-size: contain;
+}
+
+
+
 
 
 .products-wrap {
@@ -5613,7 +5722,8 @@ table td:nth-child(3) {
     }
 
     .game-page {
-        min-height: 634px;
+        /*min-height: 634px;*/
+        min-height: auto;
     }
 
     .prize-block-info {
@@ -5641,6 +5751,7 @@ table td:nth-child(3) {
         width: 341px;
         height: 390px;
         margin-top: auto;
+        margin-bottom: 0;
     }
 
     .legs {
@@ -5739,6 +5850,20 @@ table td:nth-child(3) {
     .game-funtomat {
         transform: scale(.7) translate(10px, -100px);
         margin-bottom: -100px;
+    }
+
+    .game-club-container {
+        min-height: auto;
+    }
+
+    .game-game-club {
+        width: 328px;
+        height: 298px;
+    }
+
+    .flip-container, .front, .back {
+        width: 72px;
+        height: 167px;
     }
 }
 
@@ -6879,7 +7004,7 @@ table td:nth-child(3) {
 
     .turn .game-page {
         min-height: 100vh;
-        min-height: calc(var(--vh, 1vh) * 100);
+        /*min-height: calc(var(--vh, 1vh) * 100);*/
         padding: 0;
         background: url(../img/bg-game-vert-mob.jpg) center 0 no-repeat;
         background-size: cover;
@@ -7017,7 +7142,8 @@ table td:nth-child(3) {
         margin-top: 90px;
     }
 
-    .video-game-container {
+    .video-game-container,
+    .game-club-container {
         justify-content: center;
         height: 100vh;
     }
@@ -7275,5 +7401,62 @@ table td:nth-child(3) {
     .booth11 {
         top: 48px;
         left: -188px;
+    }
+
+    .game-bowling, 
+    .game-roller-coaster {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-height: 360px) {
+    .game-title {
+        font-size: 18px;
+    }
+
+    .game-text {
+        font-size: 13px;
+        line-height: 14px;
+    }
+
+    .game-page .my-bank.mobile-visible {
+        margin-top: 20px;
+    }
+
+    .game-page .profile-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .game-notice:not(.no-reg) {
+        transform: scale(.8) translate(20px, 0px);
+        margin: 15px 0 5px auto;
+    }
+
+    .not-wait + .btn-wrapper, 
+    .game-notice:not(.no-reg) + .btn-wrapper {
+        text-align: right;
+    }
+
+    .not-wait + .btn-wrapper .btn, 
+    .game-notice:not(.no-reg) + .btn-wrapper .btn {
+        min-width: 120px;
+    }
+
+    .game-bowling, 
+    .game-roller-coaster {
+        width: 270px;
+        height: 270px;
+    }
+
+    .game-game-club {
+        width: 296px;
+        height: 296px;
+    }
+
+    .flip-container, .front, .back {
+        width: 65px;
+        height: 151px;
     }
 }

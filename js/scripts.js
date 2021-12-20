@@ -406,7 +406,10 @@ $(document).ready(function () {
             var equation = $('#equation3').removeClass("done").removeClass(chocos[prev]).addClass(chocos[index]),
                 timeout = setTimeout(function() { 
                     equation.addClass('done');
-                    OpenPopup('draw-prize');
+                    // показываем попап с результатом
+                    setTimeout(function() { 
+                        OpenPopup('draw-prize');
+                    },1000);
                 },3800);
                 // timeout = equation.addClass('done');
             prev = index;
@@ -415,11 +418,65 @@ $(document).ready(function () {
         spinTwo();
         spinThree();
     }
-
     
     $('.funtomat-game').click(function(e){
-        // значение функции - один из 3х вариантов видео (1-3, 2-3, 3-3), если не нравятся названия результатов - поменять их и у айдишников видео
+        // значения функции - номера шоколадок от 0 до 8, для 1-3 элементов спина
         spinGame(2, 3, 4);
+    });
+
+    function cardGame(first, second, third, fourth) {
+        var chocos = ['zero','one','two','three','four','five','six','seven','eight','nine','ten'],
+        prev = -1;
+
+        function flipOne() {
+            do {
+                index = first;
+            } while (index == prev);
+            var flip = $('#flip1').removeClass("active").removeClass(chocos[prev]).addClass(chocos[index]),
+                timeout = setTimeout(function() { flip.addClass('active') },2000);
+            prev = index;
+        }
+        function flipTwo() {
+            do {
+                index = second;
+            } while (index == prev);
+            var flip = $('#flip2').removeClass("active").removeClass(chocos[prev]).addClass(chocos[index]),
+                timeout = setTimeout(function() { flip.addClass('active') },2400);
+            prev = index;
+        }
+        function flipThree() {
+            do {
+                index = third;
+            } while (index == prev);
+            var flip = $('#flip3').removeClass("active").removeClass(chocos[prev]).addClass(chocos[index]),
+                timeout = setTimeout(function() { 
+                    flip.addClass('active');
+                },2800);
+            prev = index;
+        }
+        function flipFour() {
+            do {
+                index = fourth;
+            } while (index == prev);
+            var flip = $('#flip4').removeClass("active").removeClass(chocos[prev]).addClass(chocos[index]),
+                timeout = setTimeout(function() { 
+                    flip.addClass('active');
+                    // показываем попап с результатом
+                    setTimeout(function() { 
+                        OpenPopup('draw-prize');
+                    },1000);
+                },3200);
+            prev = index;
+        }
+        flipOne();
+        flipTwo();
+        flipThree();
+        flipFour();
+    }
+    
+    $('.game-club-game').click(function(e){
+        // значения функции - номера шоколадок от 0 до 10, для 1-4 элементов карт
+        cardGame(0, 1, 2, 3);
     });
     
 });
