@@ -4585,7 +4585,9 @@ table td:nth-child(3) {
 }
 
 .winners-prize img {
-    max-height: 70px;
+    max-height: 55px;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .winners-prize-info {
