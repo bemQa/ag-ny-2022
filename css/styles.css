@@ -3123,6 +3123,10 @@ table td:nth-child(3) {
     margin-right: 15px;
 }
 
+.my-prize-img img {
+    max-height: 138px;
+}
+
 .my-prize-content {
     display: flex;
     flex-direction: column;
@@ -4578,6 +4582,10 @@ table td:nth-child(3) {
 	justify-content: center;
     width: 70px;
     margin-right: 10px;
+}
+
+.winners-prize img {
+    max-height: 70px;
 }
 
 .winners-prize-info {
