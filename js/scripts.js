@@ -377,42 +377,31 @@ $(document).ready(function () {
     });
 
     function spinGame(first, second, third) {
-        var chocos = ['zero','one','two','three','four','five','six','seven','eight'],
-        prev = -1;
+        var chocos = ['zero','one','two','three','four','five','six','seven','eight'];
 
         function spinOne() {
-            do {
-                // index = Math.floor(Math.random()*chocos.length);
-                index = first;
-            } while (index == prev);
-            var equation = $('#equation1').removeClass("done").removeClass(chocos[prev]).addClass(chocos[index]),
+            var index = first;
+            var equation = $('#equation1').removeClass("done zero one two three four five six seven eight").addClass(chocos[index]),
                 timeout = setTimeout(function() { equation.addClass('done') },3000);
                 // timeout = equation.addClass('done');
-            prev = index;
         }
         function spinTwo() {
-            do {
-                index = second;
-            } while (index == prev);
-            var equation = $('#equation2').removeClass("done").removeClass(chocos[prev]).addClass(chocos[index]),
-                timeout = setTimeout(function() { equation.addClass('done') },3400);
+            var index = second;
+            var equation = $('#equation2').removeClass("done zero one two three four five six seven eight").addClass(chocos[index]),
+                timeout = setTimeout(function() { equation.addClass('done') },3500);
                 // timeout = equation.addClass('done');
-            prev = index;
         }
         function spinThree() {
-            do {
-                index = third;
-            } while (index == prev);
-            var equation = $('#equation3').removeClass("done").removeClass(chocos[prev]).addClass(chocos[index]),
+            var index = third;
+            var equation = $('#equation3').removeClass("done zero one two three four five six seven eight").addClass(chocos[index]),
                 timeout = setTimeout(function() { 
                     equation.addClass('done');
                     // показываем попап с результатом
                     setTimeout(function() { 
                         OpenPopup('draw-prize');
                     },1000);
-                },3800);
+                },4000);
                 // timeout = equation.addClass('done');
-            prev = index;
         }
         spinOne();
         spinTwo();
@@ -421,44 +410,32 @@ $(document).ready(function () {
     
     $('.funtomat-game').click(function(e){
         // значения функции - номера шоколадок от 0 до 8, для 1-3 элементов спина
-        spinGame(2, 3, 4);
+        spinGame(4, 4, 4);
     });
 
     function cardGame(first, second, third, fourth) {
-        var chocos = ['zero','one','two','three','four','five','six','seven','eight','nine','ten'],
-        prev = -1;
+        var chocos = ['zero','one','two','three','four','five','six','seven','eight','nine','ten'];
 
         function flipOne() {
-            do {
-                index = first;
-            } while (index == prev);
-            var flip = $('#flip1').removeClass("active").removeClass(chocos[prev]).addClass(chocos[index]),
+            var index = first;
+            var flip = $('#flip1').removeClass("active zero one two three four five six seven eight").addClass(chocos[index]),
                 timeout = setTimeout(function() { flip.addClass('active') },2000);
-            prev = index;
         }
         function flipTwo() {
-            do {
-                index = second;
-            } while (index == prev);
-            var flip = $('#flip2').removeClass("active").removeClass(chocos[prev]).addClass(chocos[index]),
+            var index = second;
+            var flip = $('#flip2').removeClass("active zero one two three four five six seven eight").addClass(chocos[index]),
                 timeout = setTimeout(function() { flip.addClass('active') },2400);
-            prev = index;
         }
         function flipThree() {
-            do {
-                index = third;
-            } while (index == prev);
-            var flip = $('#flip3').removeClass("active").removeClass(chocos[prev]).addClass(chocos[index]),
+            var index = third;
+            var flip = $('#flip3').removeClass("active zero one two three four five six seven eight").addClass(chocos[index]),
                 timeout = setTimeout(function() { 
                     flip.addClass('active');
                 },2800);
-            prev = index;
         }
         function flipFour() {
-            do {
-                index = fourth;
-            } while (index == prev);
-            var flip = $('#flip4').removeClass("active").removeClass(chocos[prev]).addClass(chocos[index]),
+            var index = fourth;
+            var flip = $('#flip4').removeClass("active zero one two three four five six seven eight").addClass(chocos[index]),
                 timeout = setTimeout(function() { 
                     flip.addClass('active');
                     // показываем попап с результатом
@@ -466,7 +443,6 @@ $(document).ready(function () {
                         OpenPopup('draw-prize');
                     },1000);
                 },3200);
-            prev = index;
         }
         flipOne();
         flipTwo();
