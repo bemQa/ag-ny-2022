@@ -731,7 +731,7 @@ footer {
     text-align: center;
     max-width: 900px;
     width: 100%;
-    margin: 20px auto 60px;
+    margin: 20px auto;
 }
 
 .footer-wrapper {
@@ -1265,7 +1265,7 @@ span.error {
 
 .kv {
     width: 425px;
-    height: 491px;
+    height: 465px;
     margin: 0 auto 18px;
     background: url(../img/kv.png) center 0 no-repeat;
     background-size: contain;
@@ -2119,22 +2119,24 @@ span.error {
 .my-code-golds-count::after {
     content: '';
     position: absolute;
-    top: 4px;
+    top: 0;
     right: 0;
     bottom: 0;
     margin: auto;
     width: 29px;
-    height: 34px;
+    height: 25px;
     background: url(../img/gold-icon.png) center no-repeat;
     background-size: contain;
     filter: drop-shadow(7.31755px 4.39053px 5.85404px rgba(114, 4, 13, 0.2));
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .my-golds-announce {
     position: relative;
     max-width: 320px;
-    padding-top: 145px;
-    margin: 96px auto;
+    padding-top: 115px;
+    margin: 124px auto;
     font-weight: bold;
     font-size: 30px;
     line-height: 35px;
@@ -2150,10 +2152,12 @@ span.error {
     left: 0;
     right: -65px;
     margin: auto;
-    width: 135px;
-    height: 116px;
+    width: 141px;
+    height: 94px;
     background: url(../img/no-gold-icon.png) center no-repeat;
     background-size: contain;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .my-code-golds-link {
@@ -3282,8 +3286,8 @@ table td:nth-child(3) {
     margin: auto;
     width: 843px;
     height: 451px;
-    background: url(../img/chains-city.png) center no-repeat;
-    background-size: contain;
+    /*background: url(../img/chains-city.png) center no-repeat;
+    background-size: contain;*/
 }
 
 .map-city .bowling .map-city-how {
@@ -3791,8 +3795,8 @@ table td:nth-child(3) {
 
 .fame-gold-choc-title {
     font-weight: bold;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 28px;
+    line-height: 33px;
     text-align: center;
     text-transform: uppercase;
     color: #FCE7A7;
@@ -3802,7 +3806,7 @@ table td:nth-child(3) {
     max-width: 650px;
     margin: 0 auto 5px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 24px;
     text-align: center;
     text-transform: uppercase;
@@ -3810,19 +3814,17 @@ table td:nth-child(3) {
 }
 
 .gold-choc-steps {
+    position: relative;
     display: flex;
     justify-content: space-between;
     max-width: 660px;
     width: 100%;
     margin: 25px auto 15px;
+    z-index: 1;
 }
 
 .gold-choc-step {
     display: flex;
-}
-
-.gold-choc-step:first-child {
-    margin-right: 40px;
 }
 
 .gold-choc-step-img {
@@ -3835,16 +3837,16 @@ table td:nth-child(3) {
 
 .gold-choc-step-title {
     font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 18px;
+    line-height: 21px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #FCE7A7;
     margin-bottom: 10px;
 }
 
 .gold-choc-step-text {
-    max-width: 170px;
-    font-size: 14px;
+    max-width: 526px;
+    font-size: 16px;
     line-height: 1;
 }
 
@@ -3852,7 +3854,7 @@ table td:nth-child(3) {
     display: inline-block;
     margin-top: 10px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1;
 }
 
@@ -3944,17 +3946,88 @@ table td:nth-child(3) {
     background-size: contain;
 }
 
+.case-jackpot {
+    position: relative;
+    height: 300px;
+}
+
+.case-jackpot::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -200px;
+    right: -200px;
+    bottom: 0;
+    margin: auto;
+    width: 582px;
+    height: 502px;
+    background: url(../img/case.png) center no-repeat;
+    background-size: contain;
+    z-index: 0;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.case-jackpot span {
+    position: absolute;
+    top: 69px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 45px;
+    margin: auto;
+    padding: 0 2px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    color: #72040D;
+}
+
+.case-jackpot span:nth-child(1) {
+    left: -177px;
+}
+
+.case-jackpot span:nth-child(2) {
+    left: -110px;
+}
+
+.case-jackpot span:nth-child(3) {
+    left: -55px;
+}
+
+.case-jackpot span:nth-child(4) {
+    left: -3px;
+}
+
+.case-jackpot span:nth-child(5) {
+    right: -61px;
+}
+
+.case-jackpot span:nth-child(6) {
+    right: -115px;
+}
+
+.case-jackpot span:nth-child(7) {
+    right: -169px;
+}
+
 .fames-container {
     max-width: 1366px;
 }
 
 .fame-title {
+    position: relative;
     font-weight: bold;
     font-size: 30px;
     line-height: 35px;
     text-align: center;
     text-transform: uppercase;
     color: #72040D;
+    z-index: 1;
 }
 
 .fame-announce {
@@ -3966,6 +4039,7 @@ table td:nth-child(3) {
     line-height: 19px;
     text-align: center;
     text-transform: uppercase;
+    color: #fff;
 }
 
 .fame-announce::before {
@@ -3982,6 +4056,7 @@ table td:nth-child(3) {
 }
 
 .gold-choc-fames {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -4613,6 +4688,7 @@ table td:nth-child(3) {
     padding: 80px 0 0;
     background: url(../img/bg-game.jpg) center 0 no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .game-page .aside {
@@ -4625,11 +4701,15 @@ table td:nth-child(3) {
 }
 
 .game-page .aside-left {
-    left: 0;
+    left: -1000px;
+    right: 0;
+    margin: auto;
 }
 
 .game-page .aside-right {
-    right: 0;
+    left: 0;
+    right: -1000px;
+    margin: auto;
 }
 
 .game-page .back-btn {
@@ -4830,6 +4910,20 @@ table td:nth-child(3) {
     width: 614px;
     height: 660px;
     margin: auto;
+}
+
+.game-ferris-wheel::after {
+    content: '';
+    position: absolute;
+    top: -62px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 104px;
+    height: 107px;
+    background: url(../img/games/ferris-wheel/logo-wheel.png) center no-repeat;
+    background-size: contain;
 }
 
 .legs {
@@ -5348,38 +5442,38 @@ table td:nth-child(3) {
     background-size: contain;
 }
 
-.back.eight {
+.eight .back {
     background: url(../img/games/game-club/9.png) center no-repeat;
     background-size: contain;
 }
 
-.back.nine {
+.nine .back {
     background: url(../img/games/game-club/10.png) center no-repeat;
     background-size: contain;
 }
 
-.back.ten {
+.ten .back {
     background: url(../img/games/game-club/11.png) center no-repeat;
     background-size: contain;
 }
 
+.product-page {
+    padding: 130px 0 30px;
+}
 
-
-
-
-.products-wrap {
-    margin-top: 50px;
+.product-page .container {
+    max-width: 1280px;
 }
 
 .products-group {
-    border-radius: 22px;
-    box-shadow: -1px 1px 2px rgba(104, 39, 0, 0.75);
-    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px #a58453, inset 0px 0px 6px rgb(255 246 197 / 87%);
+    margin-bottom: 15px;
     transition: all .2s linear;
 }
 
 .products-group.active {
-    background: linear-gradient(217.17deg, #FFFFFF -55.4%, #FFE686 54.82%, #F7B545 152.24%);
+    background: linear-gradient(180.49deg, rgba(217, 157, 165, 0.6) -4.64%, rgba(249, 197, 113, 0.6) 38.51%, rgba(250, 216, 170, 0.6) 94.07%);
 }
 
 .products-title {
@@ -5387,15 +5481,15 @@ table td:nth-child(3) {
     display: flex;
     -ms-align-items: center;
     align-items: center;
-    height: 100px;
+    height: 70px;
     padding: 0 15px;
-    font-weight: 900;
-    font-size: 21px;
-    line-height: 26px;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 1;
     text-transform: uppercase;
-    color: #682700;
-    background: linear-gradient(217.17deg, #FFFFFF -55.4%, #FFE686 54.82%, #F7B545 152.24%);
-    border-radius: 22px;
+    color: #4A020E;
+    background: linear-gradient(180.49deg, rgba(217, 157, 165, 0.6) -4.64%, rgba(249, 197, 113, 0.6) 38.51%, rgba(250, 216, 170, 0.6) 94.07%);
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -5437,27 +5531,33 @@ table td:nth-child(3) {
     -ms-align-items: center;
     align-items: center;
     justify-content: center;
-    max-width: 80px;
+    max-width: 70px;
     width: 100%;
-    margin-right: 40px;
+    margin-right: 20px;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .products-list-wrap {
     display: none;
-    padding: 20px;
+    padding: 0px 15px 15px;
 }
 
 .products-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .products-item {
-    max-width: 250px;
+    max-width: 161px;
     width: 100%;
     text-align: center;
-    margin: 30px 0;
+    margin: 10px 6px;
+}
+
+.maxfun .products-item {
+    max-width: 165px;
 }
 
 .products-item-img {
@@ -5465,54 +5565,40 @@ table td:nth-child(3) {
     display: flex;
     -ms-align-items: center;
     align-items: center;
-    max-width: 86px;
-    width: 100%;
-    min-height: 160px;
+    justify-content: center;
+    min-height: 150px;
     margin: 0 auto 10px;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
-.products-item-img.x3::after {
-    content: '';
-    position: absolute;
-    top: 92px;
-    right: -62px;
-    width: 97px;
-    height: 65px;
-    background: url(../img/x3-points.svg) center no-repeat;
-    background-size: contain;
+.products-item-img img {
+    max-height: 150px;
+}
+
+.picnic .products-item-img img {
+    transform: rotate(-30deg) translate(-15px, 15px);
+}
+
+.picnic .products-item:nth-child(2) .products-item-img img {
+    transform: rotate(-30deg) scale(1.28) translate(2px, 10px);
+}
+
+.picnic .products-item:nth-child(3) .products-item-img img {
+    transform: rotate(-30deg) scale(1.6) translate(10px, 5px);
 }
 
 .products-item-name {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 16px;
     text-align: center;
 }
 
 .products-item-name span {
     display: block;
-    font-style: italic;
+    font-weight: normal;
 }
-
-.products-list .slick-prev,
-.products-list .slick-next {
-    top: -50px;
-    width: 23px;
-    height: 36px;
-}
-
-.products-list .slick-prev {
-    left: 0;
-    background: url(../img/arrow-left.svg) center no-repeat;
-    background-size: contain;
-}
-
-.products-list .slick-next {
-    right: 0;
-    background: url(../img/arrow-right.svg) center no-repeat;
-    background-size: contain;
-}
-
 
 .cookies-page {
     padding: 120px 0 50px;
@@ -5560,7 +5646,16 @@ table td:nth-child(3) {
     left: 0 !important;
 }
 
+.prize-popup .popup__wrap {
+    max-width: 306px;
+    padding: 0;
+    background: none;
+}
 
+.prize-popup .prize-block-info {
+    position: relative;
+    top: auto;
+}
 
 .error-404 {
     max-width: 680px;
@@ -5587,7 +5682,7 @@ table td:nth-child(3) {
 
     .kv {
         width: 350px;
-        height: 404px;
+        height: 383px;
     }
 
     .action-title {
@@ -5615,6 +5710,18 @@ table td:nth-child(3) {
 
     .gold-choc-kv {
         transform: scale(.8) translateY(25px);
+    }
+
+    .game-page .aside-left {
+        left: 0;
+        right: auto;
+        margin: 0;
+    }
+
+    .game-page .aside-right {
+        left: auto;
+        right: 0;
+        margin: 0;
     }
 }
 
@@ -5689,14 +5796,23 @@ table td:nth-child(3) {
         max-width: 1230px;
     }
 
-    .gold-choc-steps {
+    .gold-choc-steps,
+    .gold-choc-step {
         flex-direction: column;
-        max-width: 324px;
+        align-items: center;
+        max-width: 306px;
     }
 
-    .gold-choc-step:first-child {
-        margin-right: 0;
-        margin-bottom: 30px;
+    .gold-choc-step-img {
+        margin: 0 auto 10px;
+    }
+
+    .gold-choc-step-info {
+        text-align: center;
+    }
+
+    .gold-choc-step-title {
+        margin-bottom: 5px;
     }
 
     .gold-choc-find {
@@ -5776,6 +5892,12 @@ table td:nth-child(3) {
         height: 390px;
         margin-top: auto;
         margin-bottom: 0;
+    }
+
+    .game-ferris-wheel::after {
+        top: -60px;
+        width: 57px;
+        height: 59px;
     }
 
     .legs {
@@ -6024,23 +6146,25 @@ table td:nth-child(3) {
     .main-block {
         min-height: 666px;
         background: url(../img/bg1-mob.jpg) center 0 no-repeat;
-        background-size: 100% 100%;
+        background-size: 1000px;
     }
 
     .action-info {
+        margin-top: 40px;
         margin-right: auto;
     }
 
     .kv {
         width: 285px;
-        height: 329px;
+        height: 312px;
         margin-bottom: 10px;
     }
 
     .action-title {
         font-size: 25px;
         line-height: 26px;
-        margin-bottom: 8px;
+        max-width: 300px;
+        margin: 0 auto 8px;
     }
 
     .action-text {
@@ -6058,8 +6182,8 @@ table td:nth-child(3) {
     .steps-block {
         min-height: 1457px;
         padding: 43px 0 120px;
-        background: url(../img/bg2-mob.jpg) center no-repeat;
-        background-size: 100% 100%;
+        background: url(../img/bg2-mob.jpg) center 0 no-repeat;
+        background-size: 1000px;
     }
 
     .steps {
@@ -6067,14 +6191,18 @@ table td:nth-child(3) {
     }
 
     .step:not(:last-child) {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
+    }
+
+    .step-img {
+        margin-bottom: 7px;
     }
 
     .map-city-block {
         min-height: 2337px;
-        padding: 115px 0 120px;
-        background: url(../img/bg3-mob.jpg) center no-repeat;
-        background-size: 100% 100%;
+        padding: 110px 0 100px;
+        background: url(../img/bg3-mob.jpg) center 0 no-repeat;
+        background-size: 1000px;
     }
 
     .map-city-title {
@@ -6120,6 +6248,7 @@ table td:nth-child(3) {
 
     .main-map-city .wheel-img {
         max-width: 251px;
+        margin-bottom: 10px;
     }
 
     .main-map-city .bowling {
@@ -6148,12 +6277,13 @@ table td:nth-child(3) {
 
     .main-map-city .game_club-img {
         max-width: 338px;
+        margin-bottom: 14px;
     }
 
     .main-map-city .roller_coaster {
         max-width: 310px;
         width: 100%;
-        margin-bottom: 60px;
+        margin-bottom: 0;
     }
 
     .main-map-city .roller_coaster-img {
@@ -6163,8 +6293,8 @@ table td:nth-child(3) {
     .prizes-block {
         min-height: 755px;
         padding: 55px 0 130px;
-        background: url(../img/bg4-mob.jpg) center no-repeat;
-        background-size: 100% 100%;
+        background: url(../img/bg4-mob.jpg) center 0 no-repeat;
+        background-size: 1000px;
     }
 
     .prizes-title {
@@ -6183,8 +6313,8 @@ table td:nth-child(3) {
     .gold-choc-block {
         min-height: 749px;
         padding: 90px 0 64px;
-        background: url(../img/bg5-mob.jpg) center no-repeat;
-        background-size: 100% 100%;
+        background: url(../img/bg5-mob.jpg) center 0 no-repeat;
+        background-size: 1000px;
     }
 
     .gold-choc-title {
@@ -6761,35 +6891,47 @@ table td:nth-child(3) {
     .fame-gold-choc-title {
         max-width: 304px;
         margin: 0 auto 5px;
+        font-size: 25px;
     }
 
     .fame-gold-choc-text {
         max-width: 320px;
+        font-size: 19px;
         color: #4A020E;
     }
 
     .gold-choc-steps {
-        margin: 35px auto 650px;
+        margin: 35px auto 20px;
     }
 
     .gold-choc-step-title {
         color: #72040D;
     }
 
+    .case-jackpot {
+        margin: 0 auto 280px;
+    }
+
     .gold-choc-kv {
-        top: 555px;
-        left: -50px;
+        top: 670px;
+        left: -200px;
         right: -50px;
+        width: 114px;
+        height: 108px;
         margin: auto;
         transform: none;
+        background: url(../img/gold-choc-kv-mob.png) center no-repeat;
+        background-size: contain;
+        z-index: 2
     }
 
     .gold-choc-find {
-        top: 900px;
+        top: 820px;
         left: -50px;
         right: -50px;
         margin: auto;
         transform: none;
+        z-index: 1
     }
 
     .gold-choc-find-notice,
@@ -7092,6 +7234,10 @@ table td:nth-child(3) {
         width: 87px;
     }
 
+    .game-text + .prize-block-info-button {
+        margin-top: 40px;
+    }
+
     .game-page .profile-lvls {
         width: 90px;
         margin: 0 0 0 auto;
@@ -7203,18 +7349,66 @@ table td:nth-child(3) {
         margin-bottom: -40%;
     }
 
+    .product-page {
+        padding: 150px 0 40px;
+    }
 
+    .product-page .container {
+        max-width: 375px;
+    }
 
     .products-group {
+        position: relative;
+    }
+
+    .products-group:not(:last-child) {
         margin-bottom: 50px;
+    }
+
+    .products-group::after {
+        content: '';
+        display: flex;
+        -ms-align-items: center;
+        align-items: center;
+        position: absolute;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        background: url(../img/plus-products.svg) center right no-repeat;
+        background-size: contain;
+    }
+
+    .products-group.active::after {
+        background: url(../img/minus-products.svg) center right no-repeat;
+        background-size: contain;
     }
 
     .products-logo {
         position: absolute;
-        top: -28px;
+        top: -22px;
         left: 0;
         right: 0;
         margin: auto;
+    }
+
+    .ag .products-logo {
+        top: -29px;
+    }
+
+    .dark .products-logo {
+        top: -24px;
+    }
+
+    .oreo .products-logo {
+        top: -15px;
+    }
+
+    .picnic .products-logo {
+        top: -13px;
     }
 
     .products-title {
@@ -7222,39 +7416,49 @@ table td:nth-child(3) {
         justify-content: center;
     }
 
-    .products-title::after {
-        content: '';
-        width: 30px;
-        height: 30px;
-        top: auto;
-        left: 0;
-        right: 0;
-        bottom: -15px;
-    }
-
+    .products-title::after,
     .products-title.active::after {
-        content: '';
-        width: 16px;
-        height: 16px;
-        top: 15px;
-        left: auto;
-        right: 15px;
-        bottom: auto;
-        background: url(../img/close-menu.svg) center no-repeat;
-        background-size: contain;
+        display: none;
     }
 
-    .products-list {
-        display: block;
+    .products-list-wrap {
+        padding: 0 15px 30px;
     }
 
     .products-item {
-        max-width: 100%;
+        max-width: none;
+        width: auto;
+        margin: 5px 10px;
+    }
+
+    .products-item-img {
         margin: 0 auto;
     }
 
-    .products-item.desktop-visible {
-        display: none !important;
+    .picnic .products-item-img img,
+    .picnic .products-item:nth-child(2) .products-item-img img,
+    .picnic .products-item:nth-child(3) .products-item-img img {
+        transform: none;
+    }
+
+    .picnic .products-item:nth-child(1) {
+        max-width: 156px;
+    }
+
+    .picnic .products-item:nth-child(2) {
+        max-width: 201px;
+    }
+
+    .picnic .products-item:nth-child(3) {
+        max-width: 268px;
+    }
+
+    .picnic .products-item-img {
+        min-height: auto;
+    }
+
+    .picnic .products-item-img img {
+        max-height: none;
     }
 
     .cookies-page {

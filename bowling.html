@@ -76,7 +76,7 @@
 									<div class="prize-block-info-prize-img gold">
 										<img src="img/prizes/prize-gold-icon.png" alt="">
 									</div>
-									<div class="prize-block-info-prize-name">от х1 до х3 голдов</div>
+									<div class="prize-block-info-prize-name">х2, х3 голдов</div>
 								</div>
 							</div>
 						</div>
@@ -88,7 +88,7 @@
 							<div class="my-bank-coins">1000</div>
 							<div class="my-bank-coins-text">голдов</div>
 						</div>
-						<a href="prizes.html" class="prize-block-info-button mobile-visible">
+						<a href="#!" class="prize-block-info-button mobile-visible pop-op" data-popup="prize-block">
 							<img src="img/button_prizes.png" alt="">
 						</a>
 					</div>
@@ -100,9 +100,9 @@
 						<a href="#!" class="btn pop-op" data-popup="draw-confirm">Играть за 1 голд</a>
 					</div>
 					<div class="game-bowling">
-						<video id="video-bowling-fail" class="video-bowling" tabindex="0" src="img/games/bowling/video/1080x1080-fail.mp4" preload="auto" muted playsinline width="100%" style=""></video>
-						<video id="video-bowling-half" class="video-bowling" tabindex="0" src="img/games/bowling/video/1080x1080-half.mp4" preload="auto" muted playsinline width="100%" style="display: none;"></video>
-						<video id="video-bowling-strike" class="video-bowling" tabindex="0" src="img/games/bowling/video/1080x1080-strike.mp4" preload="auto" muted playsinline width="100%" style="display: none;"></video>
+						<video id="video-bowling-fail" class="video-bowling" tabindex="0" src="img/games/bowling/video/1080x1080-fail.mp4" poster="img/games/bowling/bowling-poster.png" preload="auto" muted playsinline width="100%" style=""></video>
+						<video id="video-bowling-half" class="video-bowling" tabindex="0" src="img/games/bowling/video/1080x1080-half.mp4" poster="img/games/bowling/bowling-poster.png" preload="auto" muted playsinline width="100%" style="display: none;"></video>
+						<video id="video-bowling-strike" class="video-bowling" tabindex="0" src="img/games/bowling/video/1080x1080-strike.mp4" poster="img/games/bowling/bowling-poster.png" preload="auto" muted playsinline width="100%" style="display: none;"></video>
 					</div>
 				</div>
 				<div class="aside aside-right">
@@ -458,6 +458,39 @@
 						<a href="#!" class="btn popup-btn">Забрать</a>
 					</div>
                 </div>
+            </div>
+		</div>
+		<div id="prize-block" class="popup prize-popup">
+			<div class="popup__wrap">
+				<a href="#!" class="close-popup js-close-popup">
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18.0078 2L2.00781 18" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    					<path d="M2.00781 2L18.0078 18" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</a>
+                <div class="prize-block-info">
+					<div class="prize-block-info-title">призы, которые ты <br>можешь найти:</div>
+					<div class="prize-block-info-prizes">
+						<div class="prize-block-info-prize">
+							<div class="prize-block-info-prize-img money">
+								<img src="img/prizes/r30-icon.png" alt="">
+							</div>
+							<div class="prize-block-info-prize-name">30 рублей <br>на телефон</div>
+						</div>
+						<div class="prize-block-info-prize">
+							<div class="prize-block-info-prize-img cert">
+								<img src="img/prizes/cert300-icon.png" alt="">
+							</div>
+							<div class="prize-block-info-prize-name">сертификат на <br>300 рублей</div>
+						</div>
+						<div class="prize-block-info-prize">
+							<div class="prize-block-info-prize-img gold">
+								<img src="img/prizes/prize-gold-icon.png" alt="">
+							</div>
+							<div class="prize-block-info-prize-name">х2, х3 голдов</div>
+						</div>
+					</div>
+				</div>
             </div>
 		</div>
 	</div>
