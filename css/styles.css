@@ -4701,14 +4701,14 @@ table td:nth-child(3) {
 }
 
 .game-page .aside-left {
-    left: -1000px;
+    left: -1050px;
     right: 0;
     margin: auto;
 }
 
 .game-page .aside-right {
     left: 0;
-    right: -1000px;
+    right: -1050px;
     margin: auto;
 }
 
@@ -4879,6 +4879,10 @@ table td:nth-child(3) {
 
 .my-bank + .game-notice {
     margin-top: 50px;
+}
+
+.game-page .game-container {
+    z-index: 2;
 }
 
 .game-title {
@@ -5235,13 +5239,33 @@ table td:nth-child(3) {
     z-index: 1;
 }
 
-@keyframes spin {
+@keyframes spin1 {
     from {
         background-position: center -5px;
     }
 
     to {
         background-position: center -2190px;
+    }
+}
+
+@keyframes spin2 {
+    from {
+        background-position: center -250px;
+    }
+
+    to {
+        background-position: center -2435px;
+    }
+}
+
+@keyframes spin3 {
+    from {
+        background-position: center -490px;
+    }
+
+    to {
+        background-position: center -2675px;
     }
 }
 
@@ -5279,8 +5303,20 @@ table td:nth-child(3) {
     background-color: transparent;
     background-position: 0;
     border-radius: 5px;
-    animation: spin 3s linear 0s infinite;
+    /*animation: spin 3s linear 0s infinite;*/
     transition: background-position 2s ease-out 0s;
+}
+
+.equation1 .spinner {
+    animation: spin1 3s linear 0s infinite;
+}
+
+.equation2 .spinner {
+    animation: spin2 3s linear 0s infinite;
+}
+
+.equation3 .spinner {
+    animation: spin3 3s linear 0s infinite;
 }
 
 .equation .chocos {
