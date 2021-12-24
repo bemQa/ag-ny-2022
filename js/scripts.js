@@ -309,9 +309,15 @@ $(document).ready(function () {
         if(mql.matches) {  
             $('.wrapper').removeClass('turn');
             $('.wrapper').addClass('not-turn');
+
+            $('.game-ferris-wheel').css('transform', 'none');
         } else {  
             $('.wrapper').removeClass('not-turn');
             $('.wrapper').addClass('turn');
+
+            if(window.innerHeight < 325 && screen.width >= 360) {
+                $('.game-ferris-wheel').css('transform', 'scale(.8) translateY(-15px)');
+            }
         }
 
         // Прослушка события изменения ориентации
@@ -319,16 +325,29 @@ $(document).ready(function () {
             if(m.matches) {
                 $('.wrapper').removeClass('turn');
                 $('.wrapper').addClass('not-turn');
+
+                $('.game-ferris-wheel').css('transform', 'none');
             }
             else {
                 $('.wrapper').removeClass('not-turn');
                 $('.wrapper').addClass('turn');
+
+                if(window.innerHeight < 325 && screen.width >= 360) {
+                    $('.game-ferris-wheel').css('transform', 'scale(.8) translateY(-15px)');
+                }
             }
         });
     }
     if($('.game-page').length) {
         turnApp();
     }
+
+    // добавить таймаут результату выигрыша после клика на колесе обозрения
+    $('.draw-prize-btn').click(function(e) {
+        setTimeout(function() { 
+            OpenPopup('draw-prize');
+        },1000);
+    });
 
     function bowlingGame(result) {
         let video = $('#video-bowling-'+result).get(0);
@@ -376,6 +395,7 @@ $(document).ready(function () {
         rollerCoasterGame('3-3');
     });
 
+    // старый вариант анимации
     function spinGame(first, second, third) {
         var chocos = ['zero','one','two','three','four','five','six','seven','eight'];
 
@@ -383,13 +403,11 @@ $(document).ready(function () {
             var index = first;
             var equation = $('#equation1').removeClass("done zero one two three four five six seven eight").addClass(chocos[index]),
                 timeout = setTimeout(function() { equation.addClass('done') },3000);
-                // timeout = equation.addClass('done');
         }
         function spinTwo() {
             var index = second;
             var equation = $('#equation2').removeClass("done zero one two three four five six seven eight").addClass(chocos[index]),
                 timeout = setTimeout(function() { equation.addClass('done') },3500);
-                // timeout = equation.addClass('done');
         }
         function spinThree() {
             var index = third;
@@ -401,16 +419,51 @@ $(document).ready(function () {
                         OpenPopup('draw-prize');
                     },1000);
                 },4000);
-                // timeout = equation.addClass('done');
         }
         spinOne();
         spinTwo();
         spinThree();
     }
+
+    // новый вариант
+    // function spinGame(first, second, third) {
+    //     var chocos_pos = ['-2190px','-2435px','-2675px','-2920px','-3160px','-3405px','-3650px','-3895px','-4135px'];
+
+    //     function spinOne() {
+    //         var index = first;
+    //         var equation = $('#equation1');
+    //         var timeout = setTimeout(function() { 
+    //             equation.removeClass('done');
+    //             setTimeout(function() {
+    //                 equation.addClass('done');
+    //                 $('#equation1 .spinner').css({'background-position': 'center '+chocos_pos[index]}) 
+    //             },3000);
+    //         },300);
+    //     }
+    //     function spinTwo() {
+    //         var index = second;
+    //         var timeout = setTimeout(function() { 
+    //             $('#equation2 .spinner').css({'background-position': 'center '+chocos_pos[index]}) 
+    //         },600);
+    //     }
+    //     function spinThree() {
+    //         var index = third;
+    //         var timeout = setTimeout(function() { 
+    //             $('#equation3 .spinner').css({'background-position': 'center '+chocos_pos[index]});
+    //             // показываем попап с результатом
+    //             setTimeout(function() { 
+    //                 OpenPopup('draw-prize');
+    //             },4000);
+    //         },900);
+    //     }
+    //     spinOne();
+    //     spinTwo();
+    //     spinThree();
+    // }
     
     $('.funtomat-game').click(function(e){
         // значения функции - номера шоколадок от 0 до 8, для 1-3 элементов спина
-        spinGame(4, 4, 4);
+        spinGame(7, 2, 1);
     });
 
     function cardGame(first, second, third, fourth) {

@@ -1772,10 +1772,39 @@ span.error {
     z-index: 1;
 }
 
+.main-gold-choc-fames-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.case-jackpot-title {
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #72040D;
+    z-index: 1;
+}
+
+.case-jackpot-text {
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #72040D;
+    z-index: 1;
+}
+
 .main-gold-choc-fames {
     display: flex;
     justify-content: space-between;
-    max-width: 1100px;
+    max-width: 716px;
     width: 100%;
     margin: 8px auto 16px;
 }
@@ -5249,36 +5278,6 @@ table td:nth-child(3) {
     }
 }
 
-/*@keyframes spin1 {
-    from {
-        background-position: center -5px;
-    }
-
-    to {
-        background-position: center -2190px;
-    }
-}
-
-@keyframes spin2 {
-    from {
-        background-position: center -250px;
-    }
-
-    to {
-        background-position: center -2435px;
-    }
-}
-
-@keyframes spin3 {
-    from {
-        background-position: center -490px;
-    }
-
-    to {
-        background-position: center -2675px;
-    }
-}*/
-
 .equation {
     position: absolute;
     width: 140px;
@@ -5314,19 +5313,11 @@ table td:nth-child(3) {
     background-position: 0;
     border-radius: 5px;
     animation: spin 3s linear 0s infinite;
-    transition: background-position 2s ease-out 0s;
+    /*transition: background-position 2s ease-out 0s;*/
 }
 
 /*.equation1 .spinner {
     animation: spin1 3s linear 0s infinite;
-}
-
-.equation2 .spinner {
-    animation: spin2 3s linear 0s infinite;
-}
-
-.equation3 .spinner {
-    animation: spin3 3s linear 0s infinite;
 }*/
 
 .equation .chocos {
@@ -5336,13 +5327,13 @@ table td:nth-child(3) {
     background-position: center -5px;
 }
 
-.equation2 .chocos {
+/*.equation2 .chocos {
     background-position: center -250px;
 }
 
 .equation3 .chocos {
     background-position: center -490px;
-}
+}*/
 
 .equation.zero .chocos {
     background-position: center -2190px;
@@ -5382,7 +5373,7 @@ table td:nth-child(3) {
 
 .equation.done .spinner {
     animation: none;
-    /*transition: background-position 2s ease-out 0s;*/
+    transition: background-position 2s ease-out 0s;
 }
 /**/
 
@@ -6386,7 +6377,20 @@ table td:nth-child(3) {
     }
 
     .main-gold-choc-text::before {
-        display: none;
+        top: 75px;
+    }
+
+    .main-gold-choc-fames-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .case-jackpot-wrapper {
+        order: -1;
+    }
+
+    .case-jackpot-wrapper .main-case-jackpot {
+        margin: 0 auto;
     }
 
     .main-gold-choc-fames {
@@ -7732,5 +7736,11 @@ table td:nth-child(3) {
     .flip-container, .front, .back {
         width: 65px;
         height: 151px;
+    }
+}
+
+@media (max-height: 300px) {
+    .game-ferris-wheel {
+        transform: scale(.7) translateY(-60px);
     }
 }
