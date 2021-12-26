@@ -1247,8 +1247,8 @@ span.error {
 .main-block {
     position: relative;
     min-height: 810px;
-    background: url(../img/bg1.jpg) center no-repeat;
-    background-size: cover;
+    background: url(../img/bg1.jpg) center 0 no-repeat;
+    background-size: 1920px;
 }
 
 .main-block .container {
@@ -1318,8 +1318,8 @@ span.error {
     position: relative;
     min-height: 565px;
     padding: 110px 0 105px;
-    background: url(../img/bg2.jpg) center no-repeat;
-    background-size: cover;
+    background: url(../img/bg2.jpg) center 0 no-repeat;
+    background-size: 1920px;
 }
 
 .steps {
@@ -1366,8 +1366,8 @@ span.error {
     position: relative;
     min-height: 996px;
     padding: 100px 0 115px;
-    background: url(../img/bg3.jpg) center no-repeat;
-    background-size: cover;
+    background: url(../img/bg3.jpg) center 0 no-repeat;
+    background-size: 1920px;
 }
 
 .map-city-block .container {
@@ -1564,8 +1564,8 @@ span.error {
     position: relative;
     min-height: 712px;
     padding: 33px 0 120px;
-    background: url(../img/bg4.jpg) center no-repeat;
-    background-size: cover;
+    background: url(../img/bg4.jpg) center 0 no-repeat;
+    background-size: 1920px;
 }
 
 .prizes-title {
@@ -1720,8 +1720,8 @@ span.error {
     position: relative;
     min-height: 654px;
     padding: 89px 0 70px;
-    background: url(../img/bg5.jpg) center no-repeat;
-    background-size: cover;
+    background: url(../img/bg5.jpg) center 0 no-repeat;
+    background-size: 1920px;
 }
 
 .gold-choc-title {
@@ -2148,7 +2148,7 @@ span.error {
 .my-code-golds-count::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 2px;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -4730,15 +4730,17 @@ table td:nth-child(3) {
 }
 
 .game-page .aside-left {
-    left: -1050px;
-    right: 0;
+    left: 0;
+    right: 1050px;
     margin: auto;
+    max-width: 348px;
 }
 
 .game-page .aside-right {
-    left: 0;
-    right: -1050px;
+    left: 1050px;
+    right: 0;
     margin: auto;
+    max-width: 348px;
 }
 
 .game-page .back-btn {
@@ -4911,7 +4913,7 @@ table td:nth-child(3) {
 }
 
 .game-page .game-container {
-    z-index: 2;
+    z-index: auto;
 }
 
 .game-title {
@@ -5278,6 +5280,96 @@ table td:nth-child(3) {
     }
 }
 
+@keyframes spin0 {
+    from {
+        background-position: center -5px;
+    }
+
+    to {
+        background-position: center -2190px;
+    }
+}
+
+@keyframes spin1 {
+    from {
+        background-position: center -250px;
+    }
+
+    to {
+        background-position: center -2435px;
+    }
+}
+
+@keyframes spin2 {
+    from {
+        background-position: center -490px;
+    }
+
+    to {
+        background-position: center -2675px;
+    }
+}
+
+@keyframes spin3 {
+    from {
+        background-position: center -735px;
+    }
+
+    to {
+        background-position: center -2920px;
+    }
+}
+
+@keyframes spin4 {
+    from {
+        background-position: center -977px;
+    }
+
+    to {
+        background-position: center -3163px;
+    }
+}
+
+@keyframes spin5 {
+    from {
+        background-position: center -1222px;
+    }
+
+    to {
+        background-position: center -3407px;
+    }
+}
+
+@keyframes spin6 {
+    from {
+        background-position: center -1465px;
+    }
+
+    to {
+        background-position: center -3650px;
+    }
+}
+
+@keyframes spin7 {
+    from {
+        background-position: center -1710px;
+    }
+
+    to {
+        background-position: center -3896px;
+    }
+}
+
+@keyframes spin8 {
+    from {
+        background-position: center -1951px;
+    }
+
+    to {
+        background-position: center -4137px;
+    }
+}
+
 .equation {
     position: absolute;
     width: 140px;
@@ -5312,7 +5404,7 @@ table td:nth-child(3) {
     background-color: transparent;
     background-position: 0;
     border-radius: 5px;
-    animation: spin 3s linear 0s infinite;
+    animation: spin 2s linear 0s infinite;
     /*transition: background-position 2s ease-out 0s;*/
 }
 
@@ -5339,36 +5431,72 @@ table td:nth-child(3) {
     background-position: center -2190px;
 }
 
+.equation.zero .spinner {
+    animation: spin0 2s linear 0s;
+}
+
 .equation.one .chocos {
     background-position: center -2435px;
+}
+
+.equation.one .spinner {
+    animation: spin1 2s linear 0s;
 }
 
 .equation.two .chocos {
     background-position: center -2675px;
 }
 
+.equation.two .spinner {
+    animation: spin2 2s linear 0s;
+}
+
 .equation.three .chocos {
     background-position: center -2920px;
 }
 
+.equation.three .spinner {
+    animation: spin3 2s linear 0s;
+}
+
 .equation.four .chocos {
-    background-position: center -3160px;
+    background-position: center -3163px;
+}
+
+.equation.four .spinner {
+    animation: spin4 2s linear 0s;
 }
 
 .equation.five .chocos {
-    background-position: center -3405px;
+    background-position: center -3407px;
+}
+
+.equation.five .spinner {
+    animation: spin5 2s linear 0s;
 }
 
 .equation.six .chocos {
     background-position: center -3650px;
 }
 
+.equation.six .spinner {
+    animation: spin6 2s linear 0s;
+}
+
 .equation.seven .chocos {
-    background-position: center -3895px;
+    background-position: center -3896px;
+}
+
+.equation.seven .spinner {
+    animation: spin7 2s linear 0s;
 }
 
 .equation.eight .chocos {
-    background-position: center -4135px;
+    background-position: center -4137px;
+}
+
+.equation.eight .spinner {
+    animation: spin8 2s linear 0s;
 }
 
 .equation.done .spinner {
@@ -5811,6 +5939,11 @@ table td:nth-child(3) {
     .prizes-profile-info .my-bank {
         margin-right: 0;
         transform: scale(.8) translateY(10px);
+    }
+
+    .prizes-profile-info .profile-lvls {
+        max-width: 120px;
+        margin: 85px auto 0;
     }
 
     .million-banner {

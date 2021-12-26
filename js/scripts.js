@@ -395,75 +395,49 @@ $(document).ready(function () {
         rollerCoasterGame('3-3');
     });
 
-    // старый вариант анимации
     function spinGame(first, second, third) {
         var chocos = ['zero','one','two','three','four','five','six','seven','eight'];
 
         function spinOne() {
             var index = first;
-            var equation = $('#equation1').removeClass("done zero one two three four five six seven eight").addClass(chocos[index]),
-                timeout = setTimeout(function() { equation.addClass('done') },3000);
+            var equation = $('#equation1');
+            equation.removeClass("done zero one two three four five six seven eight");
+            setTimeout(function() { 
+                equation.addClass(chocos[index]) 
+            },3000);
         }
         function spinTwo() {
             var index = second;
-            var equation = $('#equation2').removeClass("done zero one two three four five six seven eight").addClass(chocos[index]),
-                timeout = setTimeout(function() { equation.addClass('done') },3500);
+            var equation = $('#equation2');
+            setTimeout(function() { 
+                equation.removeClass("done zero one two three four five six seven eight");
+            },500);
+            setTimeout(function() { 
+                equation.addClass(chocos[index]) 
+            },4000);
         }
         function spinThree() {
             var index = third;
-            var equation = $('#equation3').removeClass("done zero one two three four five six seven eight").addClass(chocos[index]),
-                timeout = setTimeout(function() { 
-                    equation.addClass('done');
-                    // показываем попап с результатом
-                    setTimeout(function() { 
-                        OpenPopup('draw-prize');
-                    },1000);
-                },4000);
+            var equation = $('#equation3');
+            setTimeout(function() { 
+                equation.removeClass("done zero one two three four five six seven eight");
+            },1000);
+            setTimeout(function() { 
+                equation.addClass(chocos[index]);
+                // показываем попап с результатом
+                setTimeout(function() { 
+                    OpenPopup('draw-prize');
+                },4000); 
+            },6000);
         }
         spinOne();
         spinTwo();
         spinThree();
     }
-
-    // новый вариант
-    // function spinGame(first, second, third) {
-    //     var chocos_pos = ['-2190px','-2435px','-2675px','-2920px','-3160px','-3405px','-3650px','-3895px','-4135px'];
-
-    //     function spinOne() {
-    //         var index = first;
-    //         var equation = $('#equation1');
-    //         var timeout = setTimeout(function() { 
-    //             equation.removeClass('done');
-    //             setTimeout(function() {
-    //                 equation.addClass('done');
-    //                 $('#equation1 .spinner').css({'background-position': 'center '+chocos_pos[index]}) 
-    //             },3000);
-    //         },300);
-    //     }
-    //     function spinTwo() {
-    //         var index = second;
-    //         var timeout = setTimeout(function() { 
-    //             $('#equation2 .spinner').css({'background-position': 'center '+chocos_pos[index]}) 
-    //         },600);
-    //     }
-    //     function spinThree() {
-    //         var index = third;
-    //         var timeout = setTimeout(function() { 
-    //             $('#equation3 .spinner').css({'background-position': 'center '+chocos_pos[index]});
-    //             // показываем попап с результатом
-    //             setTimeout(function() { 
-    //                 OpenPopup('draw-prize');
-    //             },4000);
-    //         },900);
-    //     }
-    //     spinOne();
-    //     spinTwo();
-    //     spinThree();
-    // }
     
     $('.funtomat-game').click(function(e){
         // значения функции - номера шоколадок от 0 до 8, для 1-3 элементов спина
-        spinGame(7, 2, 1);
+        spinGame(3, 3, 3);
     });
 
     function cardGame(first, second, third, fourth) {
@@ -471,24 +445,24 @@ $(document).ready(function () {
 
         function flipOne() {
             var index = first;
-            var flip = $('#flip1').removeClass("active zero one two three four five six seven eight").addClass(chocos[index]),
+            var flip = $('#flip1').removeClass("active zero one two three four five six seven eight nine ten").addClass(chocos[index]),
                 timeout = setTimeout(function() { flip.addClass('active') },2000);
         }
         function flipTwo() {
             var index = second;
-            var flip = $('#flip2').removeClass("active zero one two three four five six seven eight").addClass(chocos[index]),
+            var flip = $('#flip2').removeClass("active zero one two three four five six seven eight nine ten").addClass(chocos[index]),
                 timeout = setTimeout(function() { flip.addClass('active') },2400);
         }
         function flipThree() {
             var index = third;
-            var flip = $('#flip3').removeClass("active zero one two three four five six seven eight").addClass(chocos[index]),
+            var flip = $('#flip3').removeClass("active zero one two three four five six seven eight nine ten").addClass(chocos[index]),
                 timeout = setTimeout(function() { 
                     flip.addClass('active');
                 },2800);
         }
         function flipFour() {
             var index = fourth;
-            var flip = $('#flip4').removeClass("active zero one two three four five six seven eight").addClass(chocos[index]),
+            var flip = $('#flip4').removeClass("active zero one two three four five six seven eight nine ten").addClass(chocos[index]),
                 timeout = setTimeout(function() { 
                     flip.addClass('active');
                     // показываем попап с результатом
