@@ -282,6 +282,11 @@ $(document).ready(function () {
         $(this).parent().removeClass('active');
     });
 
+    $('.ag-close-tooltip').on('click', function (e) {
+        e.preventDefault();
+        $(this).parent().fadeOut();
+    });
+
     function pinCode() {
         $('.pincode').keydown(function(e){
             $(this).val('');
