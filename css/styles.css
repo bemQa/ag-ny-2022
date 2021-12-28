@@ -6527,6 +6527,7 @@ table td:nth-child(3) {
     }
 
     .main-gold-choc-fames {
+        display: block;
         margin: 20px auto;
     }
 
