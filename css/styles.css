@@ -1845,6 +1845,7 @@ span.error {
     box-shadow: 0px 1px 5px #3D1111;
     border-radius: 15px;
     z-index: 2;
+    cursor: pointer;
 }
 
 .goldtiles-main::before {
