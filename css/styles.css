@@ -5881,23 +5881,66 @@ table td:nth-child(3) {
     height: 100%;
 }
 
+.error-page {
+    padding: 220px 0 90px;
+}
+
+.error-page::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: -100px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 475px;
+    background: url(../img/error-decor.png) center no-repeat;
+    background-size: 1240px;
+}
 
 .error-404 {
-    max-width: 680px;
+    max-width: 492px;
     width: 100%;
-    height: 361px;
-    margin: 120px auto 20px;
+    height: 300px;
+    margin: 0 auto;
     background: url(../img/404.png) center no-repeat;
-    background-size: 680px;
+    background-size: 492px;
 }
 
 .error-500 {
-    max-width: 680px;
+    max-width: 486px;
     width: 100%;
-    height: 403px;
-    margin: 120px auto 0;
+    height: 300px;
+    margin: 0 auto;
     background: url(../img/500.png) center no-repeat;
-    background-size: 680px;
+    background-size: 486px;
+}
+
+.error-text {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #72040D;
+}
+
+.error-text2 {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.error-text + .btn-wrapper {
+    margin-top: 80px;
+}
+
+.error-text2 + .btn-wrapper {
+    margin-top: 55px;
 }
 
 @media (max-width: 1366px) {
@@ -7738,22 +7781,33 @@ table td:nth-child(3) {
         height: 224px;
     }
 
+    .error-page {
+        padding: 175px 0 60px;
+    }
 
+    .error-page::before {
+        top: -60px;
+        left: -150px;
+        right: -150px;
+        height: 623px;
+        background: url(../img/error-decor-mob.png) center no-repeat;
+        background-size: 375px;
+    }
 
     .error-404 {
-        max-width: 360px;
+        max-width: 334px;
         width: 100%;
-        height: 223px;
-        background: url(../img/404-mob.png) center no-repeat;
-        background-size: 360px;
+        height: 157px;
+        margin-bottom: 20px;
+        background-size: 334px;
     }
 
     .error-500 {
-        max-width: 360px;
+        max-width: 334px;
         width: 100%;
-        height: 288px;
-        background: url(../img/500-mob.png) center no-repeat;
-        background-size: 360px;
+        height: 157px;
+        margin-bottom: 20px;
+        background-size: 334px;
     }
 }
 

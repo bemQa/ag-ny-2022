@@ -38,11 +38,11 @@ body {
     -webkit-overflow-scrolling: touch;
     box-sizing: content-box;
     height: 100%;
-    color: #682700;
+    color: #4A020E;
 }
 
 .container.uf-container.container--custom {
-    color: #682700;
+    color: #4A020E;
     font-size: 18px;
     position: fixed;
     top: 0;
@@ -84,7 +84,7 @@ body {
     margin: 16px auto;
     border-radius: 10px;
     overflow: hidden;
-    border: 3px solid #682700;
+    border: 3px solid #4A020E;
 }
 
 @media screen and (max-width:768px) {
@@ -151,6 +151,7 @@ body {
     font-size: 21px;
     line-height: 1;
     text-align: center;
+    text-transform: uppercase;
     color: #fff;
     background: radial-gradient(50.17% 63.64% at 49.83% 49.09%, #F70000 0%, #E50000 52.04%, #A70000 100%);
     box-shadow: 2px 2px 5px #870b18;
@@ -170,8 +171,7 @@ body {
     margin: 20px 0;
 }
 
-.dropzone.dz-started .dz-message span,
-.uf-switchToManuallyButton-wrapper.switchToManuallyButton-wrapper--custom button {
+.dropzone.dz-started .dz-message span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,8 +183,9 @@ body {
     font-size: 21px;
     line-height: 1;
     text-align: center;
-    color: #fff;
-    background: radial-gradient(47.11% 35.28% at 48.87% 49.18%, #E9C026 0%, #F6A51B 98.4%);
+    text-transform: uppercase;
+    color: #4A020E;
+    background: linear-gradient(76.65deg, #FCE7A7 28.9%, #F6B748 58.74%, #F7B645 83.14%);
     box-shadow: 2px 2px 5px #870B18;
     transition: all .2s linear;
     cursor: pointer;
@@ -193,9 +194,22 @@ body {
     border-radius: 33px;
 }
 
-.dropzone.dz-started .dz-message span:hover,
-.uf-switchToManuallyButton-wrapper.switchToManuallyButton-wrapper--custom button:hover {
+.dropzone.dz-started .dz-message span:hover {
     box-shadow: none;
+}
+
+.uf-switchToManuallyButton-wrapper.switchToManuallyButton-wrapper--custom button {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.uf-switchToManuallyButton-wrapper.switchToManuallyButton-wrapper--custom button:hover {
+    text-decoration: none;
 }
 
 .uf-controls-wrapper {
@@ -203,17 +217,17 @@ body {
 }
 
 .uf-controls-wrapper .form-control {
-    max-width: 290px;
+    max-width: 280px;
     width: 100%;
-    height: 54px;
+    height: 48px;
     padding-left: 15px !important;
     font-family: 'OfficinaSans';
     font-size: 16px;
     line-height: 1;
-    color: #682700;
+    color: #4A020E;
     background: #fff;
-    border: 1px solid transparent;
-    border-radius: 10px;
+    border: 1px solid #D3BD9B;
+    border-radius: 30px;
     transition: all .2s linear;
     margin: 10px auto;
     box-sizing: border-box;
@@ -221,27 +235,27 @@ body {
 }
 
 .uf-controls-wrapper .form-control:focus {
-    border: 1px solid #682700;
+    border: 1px solid #4A020E;
 }
 
 .input-group.date {
     /*overflow: hidden;*/
     margin: 10px auto;
     width: 100%;
-    min-width: 250px;
-    max-width: 290px;
+    min-width: 240px;
+    max-width: 280px;
 }
 
 .input-group.date input {
     margin: 0;
-    min-width: 250px;
+    min-width: 240px;
 }
 
 .input-group.date .input-group-addon {
     border-radius: 0;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: 1px solid transparent;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 1px solid #D3BD9B;
     border-left: none;
 }
 
@@ -265,7 +279,7 @@ body {
 }
 
 zxing-scanner {
-    border-color: #682700 !important;
+    border-color: #4A020E !important;
     border: 2px solid;
     width: 200px !important;
     height: 200px !important;
@@ -288,6 +302,7 @@ app-root button {
     font-size: 21px;
     line-height: 1;
     text-align: center;
+    text-transform: uppercase;
     color: #fff;
     background: radial-gradient(50.17% 63.64% at 49.83% 49.09%, #F70000 0%, #E50000 52.04%, #A70000 100%);
     box-shadow: 2px 2px 5px #870B18;
@@ -307,7 +322,7 @@ dropzone {
     max-width: 240px;
     min-height: 156px;
     background: transparent;
-    border: 2px solid #682700;
+    border: 2px solid #4A020E;
     border-radius: 10px;
     margin: 0 auto 25px;
 }
