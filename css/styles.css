@@ -4675,7 +4675,7 @@ table td:nth-child(3) {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 230px;
+    max-width: 140px;
 }
 
 .prize-td {
@@ -7365,10 +7365,11 @@ table td:nth-child(3) {
     }
 
 	.winners-name {
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 180px;
-        margin: auto;
+        max-width: 110px;
+        margin: 0;
 	}
 
     .not-turn .game-page {
@@ -7821,8 +7822,18 @@ table td:nth-child(3) {
         font-size: 14px;
     }
 
+    .winners-table table td {
+        padding: 10px;
+    }
+
+    .winners-table table .mobile-visible,
+    .winners-prize-title {
+        font-size: 13px;
+    }
+
     .prize-td {
-        max-width: 145px;
+        max-width: 100%;
+        padding-left: 0 !important;
     }
 }
 
