@@ -674,6 +674,7 @@ header ~ .inner-page-top {
     padding: 0 10px;
     height: 30px;
     border-bottom: 2px solid transparent;
+    z-index: 13;
 }
 
 .menu-link.active,
@@ -683,7 +684,7 @@ header ~ .inner-page-top {
 
 .menu-links .login-link {
     position: absolute;
-    right: 15px;
+    right: 35px;
     padding-left: 25px;
 }
 
@@ -5944,6 +5945,75 @@ table td:nth-child(3) {
     margin-top: 55px;
 }
 
+.lang-wrap {
+    position: absolute;
+    top: 14px;
+    right: 5px;
+    width: 140px;
+    z-index: 12;
+}
+
+.lang-select {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.lang-select::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    bottom: 0;
+    width: 10px;
+    height: 6px;
+    margin: auto;
+    background: url(../img/arrow-lang-mob.svg) center no-repeat;
+    background-size: contain;
+    transition: all .2s linear;
+}
+
+.lang-select.active::after {
+    transform: rotate(-180deg);
+}
+
+.lang-dropdown {
+    display: none;
+    padding: 10px 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.45);
+}
+
+.lang {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lang:hover {
+    background: #F6F2EB;
+}
+
+.lang-name {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #85312C;
+}
+
+.lang .lang-img {
+    height: 20px;
+}
+
 @media (max-width: 1366px) {
     .action-info {
         max-width: 500px;
@@ -6319,7 +6389,7 @@ table td:nth-child(3) {
         background: url(../img/burger.svg) center no-repeat;
         background-size: 24px;
         transition: all .2s linear;
-        z-index: 11;
+        z-index: 13;
     }
 
     .burger.active {
@@ -7810,6 +7880,25 @@ table td:nth-child(3) {
         height: 157px;
         margin-bottom: 20px;
         background-size: 334px;
+    }
+
+    .lang-wrap {
+        top: 17px;
+        left: 15px;
+        right: auto;
+    }
+
+    .lang-select {
+        justify-content: center;
+    }
+
+    .lang-select .lang-img {
+        margin-right: 15px;
+    }
+
+    .lang-select::after {
+        left: 0;
+        right: -30px;
     }
 }
 

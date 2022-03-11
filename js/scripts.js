@@ -13,6 +13,21 @@ $(document).ready(function () {
         });
     });
 
+    $('.lang-select').click(function(e){
+        e.preventDefault();
+        (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+
+        $('.lang-dropdown').fadeToggle();
+        $('body').on('click', function (e) {
+            var div = $('.lang-select, .lang-dropdown');
+
+            if (!div.is(e.target) && div.has(e.target).length === 0) {
+                $('.lang-select').removeClass('active');
+                $('.lang-dropdown').fadeOut();
+            }
+        });
+    });
+
     $('.anchor[href^="#"]').click(function () {
         if($(window).innerWidth() <= 1000) {
            $('.menu-links').removeClass('active'); 
@@ -109,7 +124,7 @@ $(document).ready(function () {
             });
         });
         jQuery.validator.addMethod('email', function (value, element) {
-            return this.optional(element) || /\w+@[\da-zA-Z_]+?\.[a-zA-Z]{2,6}/.test(value);
+            return this.optional(element) || /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/.test(value);
         });
         jQuery.validator.addMethod('phone', function (value, element) {
             return this.optional(element) || /\+7\(\d+\)\d{3}-\d{2}-\d{2}/.test(value);
